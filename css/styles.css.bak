@@ -1,0 +1,26 @@
+#hipster {
+    background-image: url('../img/hipster.jpg');
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease-in-out;
+    position: fixed;
+    z-index: -1;
+}
+
+.map {
+    position: relative;
+    z-index: 1;
+}
+/* CSS goes here. */
+.subunit {
+    fill: rgba(228, 228, 228, 0.95);
+}
+.subunit.CA, .subunit.NY {
+    fill: #2C2B2B;
+}
+.subunit.CA:hover, .subunit.NY:hover {
+    fill: #9B6B00
+}
