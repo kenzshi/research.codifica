@@ -159,7 +159,7 @@ a:hover {
 }
 
 #header #logo {
-  background-image: url('../img/codifica-inverted.svg');
+  background-image: url('../img/research-inverted.svg');
   background-size: cover;
   width: 300px;
   height: 300px;
@@ -272,9 +272,11 @@ a:hover {
     stroke: rgba(44, 43, 43, 1);
     stroke-dasharray: 5, 0;
     stroke-linejoin: round;
+    transition: all 0.5s ease-in-out;
 }
 .subunit.CA:hover, .subunit.NY:hover {
-    fill: #9B6B00
+    fill: #9B6B00;
+    stroke: #9B6B00;
 }
 .subunit-boundary {
     fill: none;
