@@ -1,5 +1,5 @@
 <!DOCTYPE html> 
-<html lang="en">
+<html lang="en" ng-app="research">
 <head>
   <meta charset="utf-8">
   <title>Research: Codifica</title>
@@ -22,14 +22,13 @@
   </div>
   <section id="hipster">
   </section>
+  <section id="menu" class="consec" ng-view>
+  </section>
   <section id="about" class="consec">
     <div class="content">
-      <h1>Research</h1>
-      <br>
-      <div class="quote">Good artists borrow, great artists steal.&rdquo;</div>
-      <br>
+      <h1>About</h1>
       <p>
-        Following the words of Picasso himself, we at Codifica have traveled far and wide to search for the best coffee shops around the world. From the concrete jungle of New York City to the tech-craved, disruptive haven of San Francisco, our team has committed countless hours into researching what makes a coffee shop, well, a coffee shop.
+        We at Codifica have traveled far and wide to search for the best coffee shops around the world. From the concrete jungle of New York City to the tech-craved, disruptive haven of San Francisco, our team has committed countless hours into researching what makes a coffee shop, well, a coffee shop.
       </p>
       <p>
         The purpose of our research is to make Codifica a coffee experience unlike any other, by combining the best attributes and features of coffee repos around the world.
@@ -39,114 +38,8 @@
     <br><br>
   <div class="divider">&nbsp;</div>
   </section>
-  <section id="menu" class="consec">
-    <div class="content">
-      <h1>Locations</h1>
-      <table>
-        <h2>The Classics</h2>
-        <h4>Like a well-tested framework, these standbys never get old.</h4>
-        <tr>
-          <td>
-            <h3>Espresso</h3>
-          </td>
-          <td>
-            <h3>Latte</h3>
-          </td>
-          <td>
-            <h3>Cappuccino</h3>
-          </td>
-          <td>
-            <h3>Macchiato</h3>
-          </td>
-        </tr>
-      </table>
-      <br><br>
-      <table>
-        <h2>The Specialties</h2>
-        <h4>Proprietary solutions to in-house problems.</h4>
-        <tr>
-          <td>
-            <h3>LAMP Stack</h3>
-            A classic latte crafted from the bottom up.
-          </td>
-          <td>
-            <h3>MVC</h3>
-            Our original Model View Cappuccino, designed just like our apps.
-          </td>
-          <td>
-            <h3>macchiato.js</h3>
-            A shot of espresso served with syntactic sugar on the side.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <h3>expresso.js</h3>
-            The classic coffee framework to start your day.
-          </td>
-          <td>
-            <h3>CocoaPods</h3>
-            A mocha made with our certified organic dark chocolate.
-          </td>
-          <td>
-            <h3>Pull Request</h3>
-            A perfectly merged shot of espresso that resolves any conflict.
-          </td>
-        </tr>
-      </table>
-      <br><br>
-      <table>
-        <h2>The Details</h2>
-        <h4>#include 'pastries.h'</h4>
-        <tr>
-          <td>
-            <h3>Chef Special</h3>
-            Freshly baked scalable quiche, served hot or cold.
-          </td>
-          <td>
-            <h3>Coffee CakePHP</h3>
-            Rapidly prototyped cake with a swirl of cinnamon and built in topping.
-          </td>
-          <td>
-            <h3>Raspberry Pi</h3>
-            A slice of our gluten-free pie topped with fresh picked raspberries.
-          </td>
-        </tr>
-      </table>
-    </div>
-  </section>
-  <section id="events" class="consec">
-    <div class="divider">&nbsp;</div><br><br>
-    <h1>Events</h1>
-    <div id="event-wrapper">
-      <div class="event">
-        <h3>Open Source Night</h3>
-        A night of pure open-source contributions, held <b>every other Tuesday</b> of the month. Invite your friends, improve existing software.
-      </div>
-      <div class="event">
-        <h3>Fork It Ship It</h3>
-        One of our more high energy events, held <b>every other Thursday</b> of the month. The goal is to ship code by the end of the night.
-      </div>
-      <div class="event">
-        <h3>Open Brew</h3>
-        An install fest that aims to familiarize users with various package managers - pip, gem, npm, and apt-get. Held on the <b>first Monday</b> of every month.
-      </div>
-      <div id="tech-talks">
-        <h3>Upcoming Tech Talks</h3>
-        Tech talks occur from 7-9 PM during Fork It Ship Its.<br><br>
-        <ul>
-          <li>Vimprove Yourself - by Aman Agarwal</li>
-          <li>How to Present Your Product - by Calvin Chan</li>
-          <li>Your Website Sucks - by James Wu</li>
-          <li>Your Website is Awesome - by Kenny Shi</li>
-          <li>On Traveling - by Daniel Duan</li>
-          <li>TBA - by Jeffrey Wang</li>
-        </ul>
-      </div>
-    </div><br><br>
-    <div class="divider">&nbsp;</div>
-  </section>
   <section class="consec">
-    <div class="quote">Providing caffeine as a service since 1969.&rdquo;</div>
+      <div class="quote">Good artists borrow, great artists steal.&rdquo;</div>
   </section>
   <section id="contact" class="consec">
     <div class="content">
@@ -163,10 +56,15 @@
       </div>
     </div>
   </section>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-route.min.js"></script>
+  <script type="text/javascript" src="/js/angular/controllers/research.js"></script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+  <script src="js/scripts.js"></script>
+
   <script type="text/javascript" src="/js/vendor/d3.v3.min.js"></script>
   <script type="text/javascript" src="/js/vendor/topojson.v1.min.js"></script>
   <script type="text/javascript" src="/js/map.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
-  <script src="js/scripts.js"></script>
 </body>
 </html>

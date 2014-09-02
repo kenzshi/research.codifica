@@ -1,0 +1,18 @@
+<div class="content">
+    <h1>Locations</h1>
+    <div id="regions">
+        <ul>
+            <li ng-repeat="region in regions" ng-click="region.select()">{{region.name}}</li>
+        </ul>
+    </div>
+    <div id="sub-regions">
+        <ul>
+            <li ng-repeat="subregion in subregions">{{subregion.name}}</li>
+        </ul>
+    </div>
+    <div id="poi">
+        <ul>
+            <li ng-repeat="point in poi">{{point}}</li>
+        </ul>
+    </div>
+</div>
