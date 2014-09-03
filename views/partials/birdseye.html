@@ -7,7 +7,7 @@
     </div>
     <div id="sub-regions">
         <ul>
-            <li ng-repeat="subregion in subregions">{{subregion.name}}</li>
+            <li ng-repeat="subregion in subregions" ng-click="subregion.select()">{{subregion.name}}</li>
         </ul>
     </div>
     <div id="poi">

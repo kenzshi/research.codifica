@@ -1,0 +1,109 @@
+[
+    {
+        "id" : "CA",
+        "name" : "California",
+        "subregionsData" : [
+            {
+                "id" : "LA",
+                "name" : "Los Angeles",
+                "poiData" : [
+                    {
+                        "id" : "1",
+                        "name" : "Primmo Paso",
+                        "address1" : "702 Montana Ave.",
+                        "address2" : "",
+                        "city" : "Santa Monica",
+                        "state" : "CA",
+                        "zip" : "90403",
+                        "country" : "USA",
+                        "lat" : "32.8017808",
+                        "long" : "-114.2447643"
+                    },
+                    {
+                        "id" : "2",
+                        "name" : "Espresso Profetta",
+                        "address1" : "1129 Glendon Ave",
+                        "address2" : "",
+                        "city" : "Los Angeles",
+                        "state" : "CA",
+                        "zip" : "90024",
+                        "country" : "USA",
+                        "lat" : "32.8017808",
+                        "long" : "-114.2447643"
+                    }
+                ]
+            },
+            {
+                "id" : "SF",
+                "name" : "San Francisco",
+                "poiData" : []
+            }
+        ]
+    },
+    {
+        "id" : "NY",
+        "name" : "New York",
+        "subregionsData" : [
+            {
+                "id" : "BKWB",
+                "name" : "Williamsburg",
+                "poiData" : [
+                    {
+                        "id" : "1",
+                        "name" : "Toby's Estate",
+                        "address1" : "125 N. 6th St.",
+                        "address2" : "",
+                        "city" : "Brooklyn",
+                        "state" : "NY",
+                        "zip" : "11249",
+                        "country" : "USA",
+                        "lat" : "32.8017808",
+                        "long" : "-114.2447643"
+                    },
+                    {
+                        "id" : "2",
+                        "name" : "Blue Bottle Coffee",
+                        "address1" : "160 Berry St.",
+                        "address2" : "",
+                        "city" : "Brooklyn",
+                        "state" : "NY",
+                        "zip" : "11249",
+                        "country" : "USA",
+                        "lat" : "32.8017808",
+                        "long" : "-114.2447643"
+                    }
+                ]
+            },
+            {
+                "id" : "SOHO",
+                "name" : "SoHo",
+                "poiData" : [
+                    {
+                        "id" : "1",
+                        "name" : "Two Hands",
+                        "address1" : "164 Mott St.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10013",
+                        "country" : "USA",
+                        "lat" : "32.8017808",
+                        "long" : "-114.2447643"
+                    },
+                    {
+                        "id" : "2",
+                        "name" : "Saturday's Surf NYC",
+                        "address1" : "31 Crosby St.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10013",
+                        "country" : "USA",
+                        "lat" : "32.8017808",
+                        "long" : "-114.2447643"
+                    }
+                ]
+            }
+        ]
+    }
+]
