@@ -106,7 +106,7 @@ research.factory('regionService', ['$http','Region', function($http, Region) {
             that.regions = [];
             that.subregions = [];
             that.poi = [];
-            $http.get('/data/research.json').success(function(data) {
+            $http.get('data/research.json').success(function(data) {
                 console.log(data);
                 //var regions = JSON.parse(data);
                 var regions = data;
