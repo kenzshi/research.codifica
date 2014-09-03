@@ -35,6 +35,14 @@ a:hover {
   border-bottom: 2px dashed #9B6B00;
 }
 
+.clearfix:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
 .content {
   width: 900px;
   margin: 0 auto;
@@ -172,30 +180,6 @@ a:hover {
   transition: all 0.5s ease-in-out;
 }
 
-#menu .content {
-  background-image: url('../img/bg.png');
-  padding: 20px;
-  border: 1px solid #9f9f9f;
-  border-bottom: 3px solid #9f9f9f;
-}
-
-#menu h2 {
-  text-align: center;
-  font-family: 'Neuton', sans-serif;
-  font-weight: 700;
-  font-size: 20pt;
-  text-shadow: 0 1px #fff;
-}
-
-#menu h3 {
-  font-weight: 700;
-  text-shadow: 0 1px #fff;
-}
-
-#menu h4 {
-  text-align: center;
-  margin-top: 10px;
-}
 
 #menu td {
   text-align: center;

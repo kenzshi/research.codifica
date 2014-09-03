@@ -1,0 +1,48 @@
+.birdseye h2 {
+  text-align: center;
+  font-family: 'Neuton', sans-serif;
+  font-weight: 700;
+  font-size: 20pt;
+  text-shadow: 0 1px #fff;
+}
+
+.birdseye h3 {
+  font-weight: 700;
+  text-shadow: 0 1px #fff;
+}
+
+.birdseye h4 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.birdseye li a {
+    font-size: 15pt;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.birdseye li a:hover {
+    border-bottom: 2px dashed #363636;
+    cursor: pointer;
+}
+
+.birdseye li .selected {
+    color: #9B6B00;
+    border-bottom: 2px dashed #9B6B00;
+}
+
+#locations.content {
+  background-image: url('../img/bg.png');
+  padding: 20px;
+  border: 1px solid #9f9f9f;
+  border-bottom: 3px solid #9f9f9f;
+}
+
+.birdseye {
+}
+
+.birdseye .pane {
+    float: left;
+    width: 20%;
+}

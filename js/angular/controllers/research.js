@@ -63,10 +63,13 @@ research.factory('Subregion', ['poiService', function(poiService) {
     function Subregion(id,name,poiData,scope) {
         this.id = id;
         this.name = name;
+        this.selected = false;
         this.poi = poiService.createFromData(poiData);
         this.scope = scope;
     }
     Subregion.prototype.select = function() {
+        this.scope.clearSelectedSubregions(this.scope.subregions);
+        this.selected = true;
         this.scope.poi = this.poi;
     };
     return Subregion;
@@ -89,10 +92,14 @@ research.factory('Region', ['subregionService', function(subregionService) {
     function Region(id,name,subregionsData,scope) {
         this.id = id;
         this.name = name;
+        this.selected = false;
         this.scope = scope;
         this.subregions = subregionService.createFromData.call(this.scope,subregionsData);
+        this.selected = "";
     }
     Region.prototype.select = function() {
+        this.scope.clearSelectedRegions(this.scope.regions);
+        this.selected = true;
         this.scope.subregions = this.subregions
         this.scope.poi = [];
     };
@@ -121,4 +128,25 @@ research.factory('regionService', ['$http','Region', function($http, Region) {
 
 research.controller('birdseyeCtrl', ['$scope', 'regionService', function($scope, regionService) {
     regionService.retrieveFromData.call($scope);
+    $scope.clearSelectedRegions = function(r) {
+        for (var i in r) {
+            if (r[i].selected) {
+                $scope.clearSelectedSubregions(r[i].subregions);
+            }
+            r[i].selected = false;
+        }
+    }
+    $scope.clearSelectedSubregions = function(sr) {
+        for (var i in sr) {
+            if (sr[i].selected) {
+                $scope.clearSelectedPointsOfInterests(sr[i].poi);
+            }
+            sr[i].selected = false;
+        }
+    }
+    $scope.clearSelectedPointsOfInterests = function(poi) {
+        for (var i in poi) {
+            poi[i].selected = false;
+        }
+    }
 }]);

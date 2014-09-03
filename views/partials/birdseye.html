@@ -1,18 +1,22 @@
-<div class="content">
+<div id="locations" class="content">
     <h1>Locations</h1>
-    <div id="regions">
-        <ul>
-            <li ng-repeat="region in regions" ng-click="region.select()">{{region.name}}</li>
-        </ul>
-    </div>
-    <div id="sub-regions">
-        <ul>
-            <li ng-repeat="subregion in subregions" ng-click="subregion.select()">{{subregion.name}}</li>
-        </ul>
-    </div>
-    <div id="poi">
-        <ul>
-            <li ng-repeat="point in poi">{{point}}</li>
-        </ul>
-    </div>
+    <section class="this-should-not-be-a-class-but-best-practices birdseye clearfix">
+        <div id="regions" class="pane">
+            <ul>
+                <li ng-repeat="region in regions" ng-click="region.select()"><a class="{{region.selected ? 'selected' : ''}}">{{region.name}}</a></li>
+            </ul>
+        </div>
+        <div id="sub-regions" class="pane">
+            <ul>
+                <li ng-repeat="subregion in subregions" ng-click="subregion.select()"><a class="{{subregion.selected ? 'selected' : ''}}">{{subregion.name}}</a></li>
+            </ul>
+        </div>
+        <div id="poi" class="pane">
+            <ul>
+                <li ng-repeat="point in poi"><a>{{point.name}}</a></li>
+            </ul>
+        </div>
+        <div id="gmap">
+        </div>
+    </section>
 </div>
