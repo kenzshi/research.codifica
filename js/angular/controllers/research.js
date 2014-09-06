@@ -17,9 +17,7 @@ research.config(['$routeProvider', function($routeProvider) {
         });
 }]);
 
-function poi(name) {
-    this.name = name;
-}
+// Models
 
 research.factory('POI', [function() {
     function POI(id,name,address,geo) {
@@ -27,6 +25,9 @@ research.factory('POI', [function() {
         this.name = name;
         this.address = address;
         this.geo = geo;
+    }
+    POI.prototype.select = function() {
+        this.selected = true;
     }
     return POI;
 }]);
@@ -89,9 +90,10 @@ research.factory('subregionService', ['Subregion', function(Subregion) {
 }]);
 
 research.factory('Region', ['subregionService', function(subregionService) {
-    function Region(id,name,subregionsData,scope) {
+    function Region(id,name,coords,subregionsData,scope) {
         this.id = id;
         this.name = name;
+        this.coords = coords;
         this.selected = false;
         this.scope = scope;
         this.subregions = subregionService.createFromData.call(this.scope,subregionsData);
@@ -102,6 +104,7 @@ research.factory('Region', ['subregionService', function(subregionService) {
         this.selected = true;
         this.scope.subregions = this.subregions
         this.scope.poi = [];
+        this.scope.d3Map.focus(this.coords.x, this.coords.y, this.coords.scale, 1000);
     };
     return Region;
 }]);
@@ -119,15 +122,77 @@ research.factory('regionService', ['$http','Region', function($http, Region) {
                 var regions = data;
                 for(var i in regions) {
                     var r = regions[i];
-                    that.regions.push(new Region(r.id,r.name,r.subregionsData,that));
+                    that.regions.push(new Region(r.id,r.name,r.coords,r.subregionsData,that));
                 }
             });
         }
     }
 }]);
 
-research.controller('birdseyeCtrl', ['$scope', 'regionService', function($scope, regionService) {
+research.factory('d3Map', [function() {
+    function d3Map(dataUrl, options) {
+        var that = this
+        this.svgMap = d3.select(options.domEl).append('svg:svg')
+            .attr('class', options.class)
+            .attr('id', options.id)
+            .attr('width', options.width)
+            .attr('height', options.height).append('g');
+        this.zoomListener = d3.behavior.zoom()
+            .scaleExtent([1, 3000])
+            .on("zoom", function () {
+                that.svgMap.attr("transform", "translate(" + d3.event.translate + ") scale(" + d3.event.scale + ")"); });
+
+        d3.json(dataUrl, function(error, us) {
+            if (error) {
+                return console.error(error);
+            }
+            var subunits = topojson.feature(us, us.objects.subunits);
+            var projection = d3.geo.albers()
+                .parallels([29.5, 45.5])
+                .translate([375,220])
+                .scale(900);
+            var path = d3.geo.path()
+                .projection(projection);
+
+            // Populates the DOM element
+            this.svgMap.selectAll(".subunit")
+                .data(topojson.feature(us, us.objects.subunits).features)
+                .enter().append("path")
+                .attr("class", function(d) { return "subunit " + d.id; })
+                .attr("d", path);
+        }.bind(this));
+    }
+
+    d3Map.prototype= {
+        focus : function(x,y,s,d) {
+            this.zoomListener.translate([x,y]).scale(s);
+            this.zoomListener.event(this.svgMap.transition().duration(d));
+        } 
+    }
+    
+    return d3Map;
+}]);
+
+// Controllers
+
+research.controller('birdseyeCtrl', ['$scope', 'regionService', 'd3Map', function($scope, regionService, d3Map) {
+    
+    function renderMap() {
+    }
+
     regionService.retrieveFromData.call($scope);
+
+    var width = window.innerWidth < 960 ? window.innerWidth * 0.66 : 960,
+        height = Math.floor(window.innerHeight * 0.80);
+    var d3Options = {
+        domEl: '#region-map',
+        class: 'map',
+        id: 'map',
+        width: 760,
+        height: 500
+    }
+    $scope.d3Map = new d3Map('us.json', d3Options); 
+
     $scope.clearSelectedRegions = function(r) {
         for (var i in r) {
             if (r[i].selected) {
@@ -135,7 +200,7 @@ research.controller('birdseyeCtrl', ['$scope', 'regionService', function($scope,
             }
             r[i].selected = false;
         }
-    }
+    };
     $scope.clearSelectedSubregions = function(sr) {
         for (var i in sr) {
             if (sr[i].selected) {
@@ -143,10 +208,10 @@ research.controller('birdseyeCtrl', ['$scope', 'regionService', function($scope,
             }
             sr[i].selected = false;
         }
-    }
+    };
     $scope.clearSelectedPointsOfInterests = function(poi) {
         for (var i in poi) {
             poi[i].selected = false;
         }
-    }
+    };
 }]);

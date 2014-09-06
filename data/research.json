@@ -2,6 +2,11 @@
     {
         "id" : "CA",
         "name" : "California",
+        "coords" : {
+            "x" : 0,
+            "y" : -275,
+            "scale" : 2.5 
+        },
         "subregionsData" : [
             {
                 "id" : "LA",
