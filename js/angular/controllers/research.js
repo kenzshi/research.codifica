@@ -164,6 +164,11 @@ research.factory('birdseye', [function() {
             var path = d3.geo.path()
                 .projection(projection);
 
+            console.log(us.objects.places);
+            for(var i in us.objects.places.geometries) {
+                console.log(us.objects.places.geometries[i].properties.name, us.objects.places.geometries[i].properties);
+            }
+
             // Populates the DOM element
             this.svgMap.selectAll(".subunit")
                 .data(topojson.feature(us, us.objects.subunits).features)
@@ -171,6 +176,15 @@ research.factory('birdseye', [function() {
                 .attr("class", function(d) { return "subunit " + d.id; })
                 .attr("id", function(d) { return d.id; })
                 .attr("d", path);
+            this.svgMap.selectAll(".places")
+                .data(topojson.feature(us, us.objects.places).features)
+                .enter().append("path")
+                .attr("class", function(d) { return "place " + d.properties.name.replace(/\ /,'_'); })
+                .attr("id", function(d) { return d.properties.name.replace(/\ /,'_'); })
+                .attr("d", path)
+                .each(function(d) {
+                    console.log(d.properties.name);
+                });
 
             // Run callback
             callback();
