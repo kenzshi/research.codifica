@@ -48,6 +48,11 @@
     {
         "id" : "NY",
         "name" : "New York",
+        "coords" : {
+            "x" : -12550,
+            "y" : -2900,
+            "scale" : 20 
+        },
         "subregionsData" : [
             {
                 "id" : "BKWB",

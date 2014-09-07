@@ -247,24 +247,15 @@ a:hover {
 
 .subunit {
     fill: rgba(228, 228, 228, 0.90);
-    stroke: rgba(44, 43, 43, 0.5);
-    stroke-dasharray: 5, 5;
-    stroke-linejoin: round;
 }
-.subunit.CA, .subunit.NY {
+.subunit#CA, .subunit#NY {
     fill: rgba(44, 43, 43, 0.9);
-    stroke: rgba(44, 43, 43, 1);
-    stroke-dasharray: 5, 0;
-    stroke-linejoin: round;
     transition: all 0.5s ease-in-out;
 }
-.subunit.CA:hover, .subunit.NY:hover {
+.subunit#CA:hover, .subunit#NY:hover, .subunit.hover#CA, .subunit.hover#NY {
     fill: #9B6B00;
-    stroke: #9B6B00;
+    cursor: pointer;
 }
 .subunit-boundary {
     fill: none;
-    stroke: #2C2B2B;
-    stroke-dasharray: 5, 1;
-    stroke-linejoin: round;
 }

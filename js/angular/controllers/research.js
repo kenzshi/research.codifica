@@ -98,13 +98,24 @@ research.factory('Region', ['subregionService', function(subregionService) {
         this.scope = scope;
         this.subregions = subregionService.createFromData.call(this.scope,subregionsData);
         this.selected = "";
+        document.getElementById(this.id).addEventListener('click', function() {
+            this.scope.$apply(this.select.bind(this)); 
+        }.bind(this));
     }
-    Region.prototype.select = function() {
-        this.scope.clearSelectedRegions(this.scope.regions);
-        this.selected = true;
-        this.scope.subregions = this.subregions
-        this.scope.poi = [];
-        this.scope.d3Map.focus(this.coords.x, this.coords.y, this.coords.scale, 1000);
+    Region.prototype = {
+        select : function() {
+            this.scope.clearSelectedRegions(this.scope.regions);
+            this.selected = true;
+            this.scope.subregions = this.subregions
+            this.scope.poi = [];
+            this.scope.birdseye.focus(this.coords.x, this.coords.y, this.coords.scale, 1500);
+        },
+        hoverOn : function() {
+            document.getElementById(this.id).setAttribute('class','subunit hover');
+        },
+        hoverOff : function() {
+            document.getElementById(this.id).setAttribute('class','subunit');
+        }
     };
     return Region;
 }]);
@@ -117,7 +128,6 @@ research.factory('regionService', ['$http','Region', function($http, Region) {
             that.subregions = [];
             that.poi = [];
             $http.get('data/research.json').success(function(data) {
-                console.log(data);
                 //var regions = JSON.parse(data);
                 var regions = data;
                 for(var i in regions) {
@@ -129,8 +139,8 @@ research.factory('regionService', ['$http','Region', function($http, Region) {
     }
 }]);
 
-research.factory('d3Map', [function() {
-    function d3Map(dataUrl, options) {
+research.factory('birdseye', [function() {
+    function birdseye(dataUrl, options, callback) {
         var that = this
         this.svgMap = d3.select(options.domEl).append('svg:svg')
             .attr('class', options.class)
@@ -159,39 +169,37 @@ research.factory('d3Map', [function() {
                 .data(topojson.feature(us, us.objects.subunits).features)
                 .enter().append("path")
                 .attr("class", function(d) { return "subunit " + d.id; })
+                .attr("id", function(d) { return d.id; })
                 .attr("d", path);
+
+            // Run callback
+            callback();
         }.bind(this));
     }
 
-    d3Map.prototype= {
+    birdseye.prototype = {
         focus : function(x,y,s,d) {
             this.zoomListener.translate([x,y]).scale(s);
             this.zoomListener.event(this.svgMap.transition().duration(d));
         } 
     }
     
-    return d3Map;
+    return birdseye;
 }]);
 
 // Controllers
 
-research.controller('birdseyeCtrl', ['$scope', 'regionService', 'd3Map', function($scope, regionService, d3Map) {
+research.controller('birdseyeCtrl', ['$scope', 'regionService', 'birdseye', function($scope, regionService, birdseye) {
     
-    function renderMap() {
-    }
-
-    regionService.retrieveFromData.call($scope);
-
-    var width = window.innerWidth < 960 ? window.innerWidth * 0.66 : 960,
-        height = Math.floor(window.innerHeight * 0.80);
-    var d3Options = {
+    var options = {
         domEl: '#region-map',
         class: 'map',
         id: 'map',
         width: 760,
         height: 500
     }
-    $scope.d3Map = new d3Map('us.json', d3Options); 
+
+    $scope.birdseye = new birdseye('us.json', options, regionService.retrieveFromData.bind($scope)); 
 
     $scope.clearSelectedRegions = function(r) {
         for (var i in r) {
