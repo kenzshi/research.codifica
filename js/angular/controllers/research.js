@@ -60,18 +60,67 @@ research.factory('poiService', ['POI', function(POI) {
     }
 }]);
 
-research.factory('Subregion', ['poiService', function(poiService) {
-    function Subregion(id,name,poiData,scope) {
+research.factory('gMap', [function() {
+    function gMap(dom, coords, poi) {
+        this.mapOptions = {
+            zoom: coords.zoom,
+            center: new google.maps.LatLng(coords.lat, coords.long)
+        }
+        this.map = new google.maps.Map(dom, this.mapOptions);
+    }
+    gMap.prototype = {
+        relocate : function(coords) {
+            this.mapOptions = {
+                zoom: coords.zoom,
+                center: new google.maps.LatLng(coords.lat, coords.long)
+            };
+            this.map.setZoom(this.mapOptions.zoom);
+            this.map.panTo(this.mapOptions.center);
+        }
+    };
+    return gMap;
+}]);
+
+research.factory('Subregion', ['poiService', 'gMap', function(poiService, gMap) {
+    function Subregion(id,name,coords,poiData,scope) {
         this.id = id;
         this.name = name;
+        this.coords = coords;
         this.selected = false;
-        this.poi = poiService.createFromData(poiData);
         this.scope = scope;
+        this.poi = poiService.createFromData(poiData);
+        this.dom = document.getElementById(this.id);
+
+        this.dom.addEventListener('click', function() {
+            this.scope.$apply(this.select.bind(this));
+        }.bind(this));
     }
-    Subregion.prototype.select = function() {
-        this.scope.clearSelectedSubregions(this.scope.subregions);
-        this.selected = true;
-        this.scope.poi = this.poi;
+    Subregion.prototype = {
+        select : function() {
+            this.scope.clearSelectedSubregions(this.scope.subregions);
+            this.selected = true;
+            this.dom.setAttribute('class','place ' + this.id + ' selected');
+            this.scope.poi = this.poi;
+            // lazy load Google Map
+            if (!this.scope.gMap) {
+                this.scope.gMap = new gMap(this.scope.gMapDom, this.coords, poi);
+            } else {
+                this.scope.gMap.relocate(this.coords);
+            }
+            this.scope.d3MapDom.style.display = 'none';
+            this.scope.gMapDom.style.display = 'block';
+        },
+        hoverOn : function() {
+            console.log("HELLO WORLD");
+            document.getElementById(this.id).setAttribute('class','place '+ this.id +' hover');
+        },
+        hoverOff : function() {
+            var classString = 'place '+ this.id;
+            if (this.selected == true) {
+                classString += ' selected'
+            }
+            document.getElementById(this.id).setAttribute('class', classString);
+        }
     };
     return Subregion;
 }]);
@@ -82,7 +131,7 @@ research.factory('subregionService', ['Subregion', function(Subregion) {
             var subregions = [];
             for(var i in subregionsData) {
                 var s = subregionsData[i];
-                subregions.push(new Subregion(s.id,s.name,s.poiData,this));
+                subregions.push(new Subregion(s.id,s.name,s.coords,s.poiData,this));
             }
             return subregions;
         }
@@ -98,7 +147,9 @@ research.factory('Region', ['subregionService', function(subregionService) {
         this.scope = scope;
         this.subregions = subregionService.createFromData.call(this.scope,subregionsData);
         this.selected = "";
-        document.getElementById(this.id).addEventListener('click', function() {
+        this.dom = document.getElementById(this.id);
+
+        this.dom.addEventListener('click', function() {
             this.scope.$apply(this.select.bind(this)); 
         }.bind(this));
     }
@@ -106,15 +157,21 @@ research.factory('Region', ['subregionService', function(subregionService) {
         select : function() {
             this.scope.clearSelectedRegions(this.scope.regions);
             this.selected = true;
+            this.dom.setAttribute('class','subunit ' + this.id + ' selected');
+            console.log(this.dom);
             this.scope.subregions = this.subregions
             this.scope.poi = [];
             this.scope.birdseye.focus(this.coords.x, this.coords.y, this.coords.scale, 1500);
         },
         hoverOn : function() {
-            document.getElementById(this.id).setAttribute('class','subunit hover');
+            document.getElementById(this.id).setAttribute('class','subunit '+ this.id +' hover');
         },
         hoverOff : function() {
-            document.getElementById(this.id).setAttribute('class','subunit');
+            var classString = 'subunit '+ this.id;
+            if (this.selected == true) {
+                classString += ' selected'
+            }
+            document.getElementById(this.id).setAttribute('class', classString);
         }
     };
     return Region;
@@ -164,11 +221,6 @@ research.factory('birdseye', [function() {
             var path = d3.geo.path()
                 .projection(projection);
 
-            console.log(us.objects.places);
-            for(var i in us.objects.places.geometries) {
-                console.log(us.objects.places.geometries[i].properties.name, us.objects.places.geometries[i].properties);
-            }
-
             // Populates the DOM element
             this.svgMap.selectAll(".subunit")
                 .data(topojson.feature(us, us.objects.subunits).features)
@@ -176,15 +228,24 @@ research.factory('birdseye', [function() {
                 .attr("class", function(d) { return "subunit " + d.id; })
                 .attr("id", function(d) { return d.id; })
                 .attr("d", path);
+
+            var cities = topojson.feature(us, us.objects.places).features;
+            var truncatedCities = [];
+
+            // So this is bad, but I'm too lazy to filter out the dataset right now
+            cities.forEach(function(el,index) {
+                var name = el.properties.name;
+                if (name == "Los Angeles" || name == "San Francisco" || name == "New York") {
+                    truncatedCities.push(el);
+                }
+            });
+
             this.svgMap.selectAll(".places")
-                .data(topojson.feature(us, us.objects.places).features)
+                .data(truncatedCities)
                 .enter().append("path")
                 .attr("class", function(d) { return "place " + d.properties.name.replace(/\ /,'_'); })
                 .attr("id", function(d) { return d.properties.name.replace(/\ /,'_'); })
-                .attr("d", path)
-                .each(function(d) {
-                    console.log(d.properties.name);
-                });
+                .attr("d", path);
 
             // Run callback
             callback();
@@ -212,6 +273,8 @@ research.controller('birdseyeCtrl', ['$scope', 'regionService', 'birdseye', func
         width: 760,
         height: 500
     }
+    $scope.d3MapDom = document.getElementById('region-map');
+    $scope.gMapDom = document.getElementById('google-map');
 
     $scope.birdseye = new birdseye('us.json', options, regionService.retrieveFromData.bind($scope)); 
 
@@ -221,6 +284,7 @@ research.controller('birdseyeCtrl', ['$scope', 'regionService', 'birdseye', func
                 $scope.clearSelectedSubregions(r[i].subregions);
             }
             r[i].selected = false;
+            r[i].dom.setAttribute('class', 'subunit ' + r[i].id);
         }
     };
     $scope.clearSelectedSubregions = function(sr) {
@@ -229,7 +293,10 @@ research.controller('birdseyeCtrl', ['$scope', 'regionService', 'birdseye', func
                 $scope.clearSelectedPointsOfInterests(sr[i].poi);
             }
             sr[i].selected = false;
+            sr[i].dom.setAttribute('class', 'place ' + sr[i].id);
         }
+        $scope.d3MapDom.style.display = 'block';
+        $scope.gMapDom.style.display = 'none';
     };
     $scope.clearSelectedPointsOfInterests = function(poi) {
         for (var i in poi) {

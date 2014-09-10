@@ -3,12 +3,12 @@
     <section class="this-should-not-be-a-class-but-best-practices birdseye clearfix">
         <div id="regions" class="pane">
             <ul>
-                <li ng-repeat="region in regions" ng-click="region.select()" ng-mouseover="region.hoverOn()" ng-mouseleave="region.hoverOff()"><a class="{{region.selected ? 'selected' : ''}}">{{region.name}}</a></li>
+                <li ng-repeat="region in regions"><a class="{{region.selected ? 'selected' : ''}}" ng-click="region.select()" ng-mouseover="region.hoverOn()" ng-mouseleave="region.hoverOff()">{{region.name}}</a></li>
             </ul>
         </div>
         <div id="sub-regions" class="pane">
             <ul>
-                <li ng-repeat="subregion in subregions" ng-click="subregion.select()"><a class="{{subregion.selected ? 'selected' : ''}}">{{subregion.name}}</a></li>
+                <li ng-repeat="subregion in subregions"><a class="{{subregion.selected ? 'selected' : ''}}" ng-click="subregion.select()" ng-mouseover="subregion.hoverOn()" ng-mouseleave="subregion.hoverOff()">{{subregion.name}}</a></li>
             </ul>
         </div>
         <div id="poi" class="pane">
@@ -18,6 +18,8 @@
         </div>
         <div id="map-container">
             <div id="region-map">
+            </div>
+            <div id="google-map">
             </div>
         </div>
     </section>

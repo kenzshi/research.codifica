@@ -252,10 +252,30 @@ a:hover {
     fill: rgba(44, 43, 43, 0.9);
     transition: all 0.5s ease-in-out;
 }
-.subunit#CA:hover, .subunit#NY:hover, .subunit.hover#CA, .subunit.hover#NY {
+.subunit#CA:hover, .subunit#NY:hover, .subunit.hover#CA, .subunit.hover#NY, .subunit.selected#CA, .subunit.selected#NY {
     fill: #9B6B00;
     cursor: pointer;
 }
 .subunit-boundary {
     fill: none;
 }
+
+.place {
+    fill: rgba(44, 43, 43, 0.9);
+    stroke-width: 0.5;
+}
+
+@-webkit-keyframes 'blink' {
+    0% { fill: rgba(44,43,43,1); }
+    50% { fill: rgba(44,43,43,0.5); }
+    100% { fill: rgba(44,43,43,1); }
+}
+
+.place.hover {
+    -webkit-animation-direction: normal;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: blink;
+    -webkit-animation-timing-function: ease;
+}
+

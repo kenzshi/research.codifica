@@ -55,3 +55,9 @@
 #region-map {
     width: auto;
 }
+
+#google-map {
+    width: calc(100%-20px); 
+    height: 250px; 
+    margin-left: 20px;
+}

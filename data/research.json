@@ -9,8 +9,13 @@
         },
         "subregionsData" : [
             {
-                "id" : "LA",
+                "id" : "Los_Angeles",
                 "name" : "Los Angeles",
+                "coords" : {
+                    "lat": 34.0522342,
+                    "long": -118.4117325,
+                    "zoom": 11
+                },
                 "poiData" : [
                     {
                         "id" : "1",
@@ -39,9 +44,39 @@
                 ]
             },
             {
-                "id" : "SF",
+                "id" : "San_Francisco",
                 "name" : "San Francisco",
-                "poiData" : []
+                "coords" : {
+                    "lat": 37.7577,
+                    "long": -122.4376,
+                    "zoom": 12
+                },
+                "poiData" : [
+                    {
+                        "id" : "1",
+                        "name" : "Primmo Paso",
+                        "address1" : "702 Montana Ave.",
+                        "address2" : "",
+                        "city" : "Santa Monica",
+                        "state" : "CA",
+                        "zip" : "90403",
+                        "country" : "USA",
+                        "lat" : "32.8017808",
+                        "long" : "-114.2447643"
+                    },
+                    {
+                        "id" : "2",
+                        "name" : "Espresso Profetta",
+                        "address1" : "1129 Glendon Ave",
+                        "address2" : "",
+                        "city" : "Los Angeles",
+                        "state" : "CA",
+                        "zip" : "90024",
+                        "country" : "USA",
+                        "lat" : "32.8017808",
+                        "long" : "-114.2447643"
+                    }
+                ]
             }
         ]
     },
@@ -55,8 +90,13 @@
         },
         "subregionsData" : [
             {
-                "id" : "BKWB",
+                "id" : "New_York",
                 "name" : "Williamsburg",
+                "coords" : {
+                    "lat": 40.712775,
+                    "long": -73.9594371,
+                    "zoom": 15
+                },
                 "poiData" : [
                     {
                         "id" : "1",
@@ -85,8 +125,13 @@
                 ]
             },
             {
-                "id" : "SOHO",
+                "id" : "New_York",
                 "name" : "SoHo",
+                "coords" : {
+                    "lat": 40.7236448,
+                    "long": -74.0006793,
+                    "zoom": 16
+                },
                 "poiData" : [
                     {
                         "id" : "1",
