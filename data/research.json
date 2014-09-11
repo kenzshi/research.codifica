@@ -18,19 +18,22 @@
                 },
                 "poiData" : [
                     {
-                        "id" : "1",
-                        "name" : "Primmo Paso",
+                        "id" : "primo_paso",
+                        "name" : "Primo Paso",
                         "address1" : "702 Montana Ave.",
                         "address2" : "",
                         "city" : "Santa Monica",
                         "state" : "CA",
                         "zip" : "90403",
                         "country" : "USA",
-                        "lat" : "32.8017808",
-                        "long" : "-114.2447643"
+                        "coords" : {
+                            "lat" : "34.02682",
+                            "long" : "-118.50156",
+                            "zoom" : 17
+                        }
                     },
                     {
-                        "id" : "2",
+                        "id" : "espresso_profetta",
                         "name" : "Espresso Profetta",
                         "address1" : "1129 Glendon Ave",
                         "address2" : "",
@@ -38,8 +41,11 @@
                         "state" : "CA",
                         "zip" : "90024",
                         "country" : "USA",
-                        "lat" : "32.8017808",
-                        "long" : "-114.2447643"
+                        "coords" : {
+                            "lat" : "34.060218",
+                            "long" : "-118.444283",
+                            "zoom" : 17
+                        }
                     }
                 ]
             },
@@ -51,32 +57,7 @@
                     "long": -122.4376,
                     "zoom": 12
                 },
-                "poiData" : [
-                    {
-                        "id" : "1",
-                        "name" : "Primmo Paso",
-                        "address1" : "702 Montana Ave.",
-                        "address2" : "",
-                        "city" : "Santa Monica",
-                        "state" : "CA",
-                        "zip" : "90403",
-                        "country" : "USA",
-                        "lat" : "32.8017808",
-                        "long" : "-114.2447643"
-                    },
-                    {
-                        "id" : "2",
-                        "name" : "Espresso Profetta",
-                        "address1" : "1129 Glendon Ave",
-                        "address2" : "",
-                        "city" : "Los Angeles",
-                        "state" : "CA",
-                        "zip" : "90024",
-                        "country" : "USA",
-                        "lat" : "32.8017808",
-                        "long" : "-114.2447643"
-                    }
-                ]
+                "poiData" : []
             }
         ]
     },
@@ -95,11 +76,11 @@
                 "coords" : {
                     "lat": 40.712775,
                     "long": -73.9594371,
-                    "zoom": 15
+                    "zoom": 14
                 },
                 "poiData" : [
                     {
-                        "id" : "1",
+                        "id" : "tobys_estate",
                         "name" : "Toby's Estate",
                         "address1" : "125 N. 6th St.",
                         "address2" : "",
@@ -107,11 +88,14 @@
                         "state" : "NY",
                         "zip" : "11249",
                         "country" : "USA",
-                        "lat" : "32.8017808",
-                        "long" : "-114.2447643"
+                        "coords" : {
+                            "lat" : "40.717977",
+                            "long" : "-73.959226",
+                            "zoom" : 17
+                        }
                     },
                     {
-                        "id" : "2",
+                        "id" : "blue_bottle",
                         "name" : "Blue Bottle Coffee",
                         "address1" : "160 Berry St.",
                         "address2" : "",
@@ -119,8 +103,11 @@
                         "state" : "NY",
                         "zip" : "11249",
                         "country" : "USA",
-                        "lat" : "32.8017808",
-                        "long" : "-114.2447643"
+                        "coords" : {
+                            "lat" : "40.717425",
+                            "long" : "-73.960664",
+                            "zoom" : 17
+                        }
                     }
                 ]
             },
@@ -130,11 +117,11 @@
                 "coords" : {
                     "lat": 40.7236448,
                     "long": -74.0006793,
-                    "zoom": 16
+                    "zoom": 14
                 },
                 "poiData" : [
                     {
-                        "id" : "1",
+                        "id" : "two_hands",
                         "name" : "Two Hands",
                         "address1" : "164 Mott St.",
                         "address2" : "",
@@ -142,11 +129,14 @@
                         "state" : "NY",
                         "zip" : "10013",
                         "country" : "USA",
-                        "lat" : "32.8017808",
-                        "long" : "-114.2447643"
+                        "coords" : {
+                            "lat" : "40.719676",
+                            "long" : "-73.995959",
+                            "zoom" : 17
+                        }
                     },
                     {
-                        "id" : "2",
+                        "id" : "saturdays_nyc",
                         "name" : "Saturday's Surf NYC",
                         "address1" : "31 Crosby St.",
                         "address2" : "",
@@ -154,8 +144,11 @@
                         "state" : "NY",
                         "zip" : "10013",
                         "country" : "USA",
-                        "lat" : "32.8017808",
-                        "long" : "-114.2447643"
+                        "coords" : {
+                            "lat" : "40.720712",
+                            "long" : "-73.999387",
+                            "zoom" : 17
+                        }
                     }
                 ]
             }

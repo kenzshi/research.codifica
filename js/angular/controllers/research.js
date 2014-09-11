@@ -20,21 +20,26 @@ research.config(['$routeProvider', function($routeProvider) {
 // Models
 
 research.factory('POI', [function() {
-    function POI(id,name,address,geo) {
+    function POI(id,name,address,coords,scope) {
         this.id = id;
         this.name = name;
         this.address = address;
-        this.geo = geo;
+        this.coords = coords;
+        this.scope = scope;
+        this.selected = false;
     }
     POI.prototype.select = function() {
+        this.scope.clearSelectedPointsOfInterests(this.scope.poi); 
         this.selected = true;
+        this.scope.pointOfInterest = this;
+        this.scope.gMap.relocate(this.coords)
     }
     return POI;
 }]);
 
 research.factory('poiService', ['POI', function(POI) {
     return {
-        createFromData: function(poiData) {
+        createFromData: function(poiData, scope) {
             // poi must be a data array of poi
             var pointsOfInterest = [];
             for(var i in poiData) {
@@ -49,11 +54,8 @@ research.factory('poiService', ['POI', function(POI) {
                         zip : p.zip,
                         country : p.country
                     },
-                    geo = {
-                        lat : p.lat,
-                        lon : p.lon
-                    };
-                pointsOfInterest.push(new POI(id,name,address,geo));
+                    coords = p.coords;
+                pointsOfInterest.push(new POI(id,name,address,coords,scope));
             }
             return pointsOfInterest;
         }
@@ -67,15 +69,35 @@ research.factory('gMap', [function() {
             center: new google.maps.LatLng(coords.lat, coords.long)
         }
         this.map = new google.maps.Map(dom, this.mapOptions);
+        this.poi = {};
+        this.renderPoi(poi);
     }
     gMap.prototype = {
-        relocate : function(coords) {
+        relocate : function(coords, poi) {
             this.mapOptions = {
                 zoom: coords.zoom,
                 center: new google.maps.LatLng(coords.lat, coords.long)
             };
             this.map.setZoom(this.mapOptions.zoom);
             this.map.panTo(this.mapOptions.center);
+            if (poi) {
+                this.renderPoi(poi);
+            }
+        },
+        renderPoi : function(poi) {
+            for(var i in poi) {
+                if (this.poi.hasOwnProperty(poi[i].id)){
+                    continue;
+                } else {
+                    var key = poi[i].id;
+                    this.poi[key] = new google.maps.Marker({
+                        position: new google.maps.LatLng(poi[i].coords.lat,poi[i].coords.long),
+                        map: this.map,
+                        title: poi[i].name
+                    });
+                }
+            }
+            console.log(this.poi);
         }
     };
     return gMap;
@@ -88,7 +110,7 @@ research.factory('Subregion', ['poiService', 'gMap', function(poiService, gMap) 
         this.coords = coords;
         this.selected = false;
         this.scope = scope;
-        this.poi = poiService.createFromData(poiData);
+        this.poi = poiService.createFromData(poiData, this.scope);
         this.dom = document.getElementById(this.id);
 
         this.dom.addEventListener('click', function() {
@@ -103,9 +125,9 @@ research.factory('Subregion', ['poiService', 'gMap', function(poiService, gMap) 
             this.scope.poi = this.poi;
             // lazy load Google Map
             if (!this.scope.gMap) {
-                this.scope.gMap = new gMap(this.scope.gMapDom, this.coords, poi);
+                this.scope.gMap = new gMap(this.scope.gMapDom, this.coords, this.poi);
             } else {
-                this.scope.gMap.relocate(this.coords);
+                this.scope.gMap.relocate(this.coords, this.poi);
             }
             this.scope.d3MapDom.style.display = 'none';
             this.scope.gMapDom.style.display = 'block';
@@ -299,6 +321,7 @@ research.controller('birdseyeCtrl', ['$scope', 'regionService', 'birdseye', func
         $scope.gMapDom.style.display = 'none';
     };
     $scope.clearSelectedPointsOfInterests = function(poi) {
+        $scope.pointOfInterest = null;
         for (var i in poi) {
             poi[i].selected = false;
         }
