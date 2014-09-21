@@ -2,25 +2,38 @@
     {
         "id" : "CA",
         "name" : "California",
+        "coords" : {
+            "x" : 0,
+            "y" : -275,
+            "scale" : 2.5 
+        },
         "subregionsData" : [
             {
-                "id" : "LA",
+                "id" : "Los_Angeles",
                 "name" : "Los Angeles",
+                "coords" : {
+                    "lat": 34.0522342,
+                    "long": -118.4117325,
+                    "zoom": 11
+                },
                 "poiData" : [
                     {
-                        "id" : "1",
-                        "name" : "Primmo Paso",
+                        "id" : "primo_paso",
+                        "name" : "Primo Paso",
                         "address1" : "702 Montana Ave.",
                         "address2" : "",
                         "city" : "Santa Monica",
                         "state" : "CA",
                         "zip" : "90403",
                         "country" : "USA",
-                        "lat" : "32.8017808",
-                        "long" : "-114.2447643"
+                        "coords" : {
+                            "lat" : "34.02682",
+                            "long" : "-118.50156",
+                            "zoom" : 17
+                        }
                     },
                     {
-                        "id" : "2",
+                        "id" : "espresso_profetta",
                         "name" : "Espresso Profetta",
                         "address1" : "1129 Glendon Ave",
                         "address2" : "",
@@ -28,17 +41,20 @@
                         "state" : "CA",
                         "zip" : "90024",
                         "country" : "USA",
-                        "lat" : "32.8017808",
-                        "long" : "-114.2447643"
+                        "coords" : {
+                            "lat" : "34.060218",
+                            "long" : "-118.444283",
+                            "zoom" : 17
+                        }
                     }
                 ]
             },
             {
-                "id" : "SF",
+                "id" : "San_Francisco",
                 "name" : "San Francisco",
                 "poiData" : [
                     {
-                        "id" : "1",
+                        "id" : "flywheel_coffee_roasters",
                         "name" : "Flywheel Coffee Roasters",
                         "address1" : "672 Stanyan St.",
                         "address2" : "",
@@ -46,11 +62,14 @@
                         "state" : "CA",
                         "zip" : "94117",
                         "country" : "USA",
-                        "lat" : "37.769732",
-                        "long" : "-122.453210"
+                        "coords" : {
+                            "lat" : "37.769732",
+                            "long" : "-122.453210",
+                            "zoom" : 17
+                        }
                     },
                     {
-                        "id" : "2",
+                        "id" : "fourbarrel_coffee",
                         "name" : "Fourbarrel Coffee",
                         "address1" : "375 Valencia St.",
                         "address2" : "",
@@ -58,8 +77,11 @@
                         "state" : "CA",
                         "zip" : "94103",
                         "country" : "USA",
-                        "lat" : "37.767033",
-                        "long" : "-122.421874"
+                        "coords" : {
+                            "lat" : "37.767033",
+                            "long" : "-122.421874",
+                            "zoom" : 17
+                        }
                     },
                     {
                         "id" : "3",
@@ -70,11 +92,14 @@
                         "state" : "CA",
                         "zip" : "94117",
                         "country" : "USA",
-                        "lat" : "37.769474",
-                        "long" : "-122.450149"
+                        "coords" : {
+                            "lat" : "37.769474",
+                            "long" : "-122.450149",
+                            "zoom" : 17
+                        }
                     },
                     {
-                        "id" : "4",
+                        "id" : "sightglass_coffee",
                         "name" : "Sightglass Coffee",
                         "address1" : "270 7th St.",
                         "address2" : "",
@@ -82,11 +107,14 @@
                         "state" : "CA",
                         "zip" : "94103",
                         "country" : "USA",
-                        "lat" : "37.776998",
-                        "long" : "-122.408561"
+                        "coords" : {
+                            "lat" : "37.776998",
+                            "long" : "-122.408561",
+                            "zoom" : 17
+                        }
                     },
                     {
-                        "id" : "5",
+                        "id" : "blue_bottle_coffee",
                         "name" : "Blue Bottle Coffee",
                         "address1" : "66 Mint Plaza.",
                         "address2" : "",
@@ -94,11 +122,14 @@
                         "state" : "CA",
                         "zip" : "94103",
                         "country" : "USA",
-                        "lat" : "37.782432",
-                        "long" : "-122.407766"
+                        "coords" : {
+                            "lat" : "37.782432",
+                            "long" : "-122.407766",
+                            "zoom" : 17
+                        }
                     },
                     {
-                        "id" : "6",
+                        "id" : "ritual_coffee_roasters",
                         "name" : "Ritual Coffee Roasters",
                         "address1" : "432b Octavia St.",
                         "address2" : "",
@@ -106,11 +137,14 @@
                         "state" : "CA",
                         "zip" : "94102",
                         "country" : "USA",
-                        "lat" : "37.776416",
-                        "long" : "-122.424252"
+                        "coords" : {
+                            "lat" : "37.776416",
+                            "long" : "-122.424252",
+                            "zoom" : 17
+                        }
                     },
                     {
-                        "id" : "7",
+                        "id" : "philz_coffee",
                         "name" : "Philz Coffee",
                         "address1" : "748 Van Ness Ave.",
                         "address2" : "",
@@ -118,11 +152,14 @@
                         "state" : "CA",
                         "zip" : "94102",
                         "country" : "USA",
-                        "lat" : "37.782487",
-                        "long" : "-122.420444"
+                        "coords" : {
+                            "lat" : "37.782487",
+                            "long" : "-122.420444",
+                            "zoom" : 17
+                        }
                     },
                     {
-                        "id" : "8",
+                        "id" : "jane",
                         "name" : "Jane",
                         "address1" : "2123 Fillmore St.",
                         "address2" : "",
@@ -130,11 +167,14 @@
                         "state" : "CA",
                         "zip" : "94115",
                         "country" : "USA",
-                        "lat" : "37.789346",
-                        "long" : "-122.434130"
+                        "coords" : {
+                            "lat" : "37.789346",
+                            "long" : "-122.434130",
+                            "zoom" : 17
+                        }
                     },
                     {
-                        "id" : "9",
+                        "id" : "back_yard_coffee_co",
                         "name" : "Back Yard Coffee Co",
                         "address1" : "965 Brewster Ave",
                         "address2" : "",
@@ -142,11 +182,14 @@
                         "state" : "CA",
                         "zip" : "94063",
                         "country" : "USA",
-                        "lat" : "37.487526",
-                        "long" : "-122.235188"
+                        "coords" : {
+                            "lat" : "37.487526",
+                            "long" : "-122.235188",
+                            "zoom" : 17
+                        }
                     },
                     {
-                        "id" : "10",
+                        "id" : "dana_street_roasting",
                         "name" : "Dana Street Roasting",
                         "address1" : "744 W Dana St.",
                         "address2" : "",
@@ -154,11 +197,14 @@
                         "state" : "CA",
                         "zip" : "94041",
                         "country" : "USA",
-                        "lat" : "37.392468",
-                        "long" : "-122.078934"
+                        "coords" : {
+                            "lat" : "37.392468",
+                            "long" : "-122.078934",
+                            "zoom" : 17
+                        }
                     },
                     {
-                        "id" : "11",
+                        "id" : "linkedin_sunnyvale_coffee_bar",
                         "name" : "LinkedIn Sunnyvale Coffee Bar",
                         "address1" : "580 N Mary Ave",
                         "address2" : "",
@@ -166,23 +212,41 @@
                         "state" : "CA",
                         "zip" : "94086",
                         "country" : "USA",
-                        "lat" : "37.392504",
-                        "long" : "-122.036750"
+                        "coords" : {
+                            "lat" : "37.392504",
+                            "long" : "-122.036750",
+                            "zoom" : 17
+                        }
                     }
-                ]
+                ],
+                "coords" : {
+                    "lat": 37.7577,
+                    "long": -122.4376,
+                    "zoom": 12
+                }
             }
         ]
     },
     {
         "id" : "NY",
         "name" : "New York",
+        "coords" : {
+            "x" : -12550,
+            "y" : -2900,
+            "scale" : 20 
+        },
         "subregionsData" : [
             {
-                "id" : "BKWB",
+                "id" : "New_York",
                 "name" : "Williamsburg",
+                "coords" : {
+                    "lat": 40.712775,
+                    "long": -73.9594371,
+                    "zoom": 14
+                },
                 "poiData" : [
                     {
-                        "id" : "1",
+                        "id" : "tobys_estate",
                         "name" : "Toby's Estate",
                         "address1" : "125 N. 6th St.",
                         "address2" : "",
@@ -190,11 +254,14 @@
                         "state" : "NY",
                         "zip" : "11249",
                         "country" : "USA",
-                        "lat" : "32.8017808",
-                        "long" : "-114.2447643"
+                        "coords" : {
+                            "lat" : "40.717977",
+                            "long" : "-73.959226",
+                            "zoom" : 17
+                        }
                     },
                     {
-                        "id" : "2",
+                        "id" : "blue_bottle",
                         "name" : "Blue Bottle Coffee",
                         "address1" : "160 Berry St.",
                         "address2" : "",
@@ -202,17 +269,25 @@
                         "state" : "NY",
                         "zip" : "11249",
                         "country" : "USA",
-                        "lat" : "32.8017808",
-                        "long" : "-114.2447643"
+                        "coords" : {
+                            "lat" : "40.717425",
+                            "long" : "-73.960664",
+                            "zoom" : 17
+                        }
                     }
                 ]
             },
             {
-                "id" : "SOHO",
+                "id" : "New_York",
                 "name" : "SoHo",
+                "coords" : {
+                    "lat": 40.7236448,
+                    "long": -74.0006793,
+                    "zoom": 14
+                },
                 "poiData" : [
                     {
-                        "id" : "1",
+                        "id" : "two_hands",
                         "name" : "Two Hands",
                         "address1" : "164 Mott St.",
                         "address2" : "",
@@ -220,11 +295,14 @@
                         "state" : "NY",
                         "zip" : "10013",
                         "country" : "USA",
-                        "lat" : "32.8017808",
-                        "long" : "-114.2447643"
+                        "coords" : {
+                            "lat" : "40.719676",
+                            "long" : "-73.995959",
+                            "zoom" : 17
+                        }
                     },
                     {
-                        "id" : "2",
+                        "id" : "saturdays_nyc",
                         "name" : "Saturday's Surf NYC",
                         "address1" : "31 Crosby St.",
                         "address2" : "",
@@ -232,8 +310,11 @@
                         "state" : "NY",
                         "zip" : "10013",
                         "country" : "USA",
-                        "lat" : "32.8017808",
-                        "long" : "-114.2447643"
+                        "coords" : {
+                            "lat" : "40.720712",
+                            "long" : "-73.999387",
+                            "zoom" : 17
+                        }
                     }
                 ]
             }

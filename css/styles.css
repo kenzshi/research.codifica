@@ -35,6 +35,14 @@ a:hover {
   border-bottom: 2px dashed #9B6B00;
 }
 
+.clearfix:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
 .content {
   width: 900px;
   margin: 0 auto;
@@ -172,30 +180,6 @@ a:hover {
   transition: all 0.5s ease-in-out;
 }
 
-#menu .content {
-  background-image: url('../img/bg.png');
-  padding: 20px;
-  border: 1px solid #9f9f9f;
-  border-bottom: 3px solid #9f9f9f;
-}
-
-#menu h2 {
-  text-align: center;
-  font-family: 'Neuton', sans-serif;
-  font-weight: 700;
-  font-size: 20pt;
-  text-shadow: 0 1px #fff;
-}
-
-#menu h3 {
-  font-weight: 700;
-  text-shadow: 0 1px #fff;
-}
-
-#menu h4 {
-  text-align: center;
-  margin-top: 10px;
-}
 
 #menu td {
   text-align: center;
@@ -259,28 +243,4 @@ a:hover {
   color: #9B6B00;
   font-weight: 700;
   font-size: 15pt;
-}
-
-.subunit {
-    fill: rgba(228, 228, 228, 0.90);
-    stroke: rgba(44, 43, 43, 0.5);
-    stroke-dasharray: 5, 5;
-    stroke-linejoin: round;
-}
-.subunit.CA, .subunit.NY {
-    fill: rgba(44, 43, 43, 0.9);
-    stroke: rgba(44, 43, 43, 1);
-    stroke-dasharray: 5, 0;
-    stroke-linejoin: round;
-    transition: all 0.5s ease-in-out;
-}
-.subunit.CA:hover, .subunit.NY:hover {
-    fill: #9B6B00;
-    stroke: #9B6B00;
-}
-.subunit-boundary {
-    fill: none;
-    stroke: #2C2B2B;
-    stroke-dasharray: 5, 1;
-    stroke-linejoin: round;
 }

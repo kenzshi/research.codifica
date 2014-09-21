@@ -1,18 +1,34 @@
-<div class="content">
+<div id="locations" class="content">
     <h1>Locations</h1>
-    <div id="regions">
-        <ul>
-            <li ng-repeat="region in regions" ng-click="region.select()">{{region.name}}</li>
-        </ul>
-    </div>
-    <div id="sub-regions">
-        <ul>
-            <li ng-repeat="subregion in subregions" ng-click="subregion.select()">{{subregion.name}}</li>
-        </ul>
-    </div>
-    <div id="poi">
-        <ul>
-            <li ng-repeat="point in poi">{{point}}</li>
-        </ul>
-    </div>
+    <section class="this-should-not-be-a-class-but-best-practices birdseye clearfix">
+        <section id="regions" class="pane">
+            <ul>
+                <li ng-repeat="region in regions"><a class="{{region.selected ? 'selected' : ''}}" ng-click="region.select()" ng-mouseover="region.hoverOn()" ng-mouseleave="region.hoverOff()">{{region.name}}</a></li>
+            </ul>
+        </section>
+        <section id="sub-regions" class="pane">
+            <ul>
+                <li ng-repeat="subregion in subregions"><a class="{{subregion.selected ? 'selected' : ''}}" ng-click="subregion.select()" ng-mouseover="subregion.hoverOn()" ng-mouseleave="subregion.hoverOff()">{{subregion.name}}</a></li>
+            </ul>
+        </section>
+        <section id="poi" class="pane">
+            <ul>
+                <li ng-repeat="point in poi"><a class="{{point.selected ? 'selected' : ''}}" ng-click="point.select()">{{point.name}}</a></li>
+            </ul>
+        </section>
+        <section id="map-container">
+            <div id="region-map">
+            </div>
+            <div id="google-map">
+            </div>
+            <div id="poiDetails" ng-if="pointOfInterest">
+                <h2>{{pointOfInterest.name}}</h2>        
+                <div class="address">
+                    <p>{{pointOfInterest.address.line1}}</p>
+                    <p ng-if="pointOfInterest.address.line2">{{pointOfInterest.address.line2}}</p>
+                    <p>{{pointOfInterest.address.city}}, {{pointOfInterest.address.state}} {{pointOfInterest.address.zip}}</p>
+                </div>
+            </div>
+        </section>
+    </section>
 </div>

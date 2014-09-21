@@ -6,6 +6,7 @@
   <meta name="description" content="Codifica: the premier open-source coffee shop.">
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/birdseye.css">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
   </div>
   <section id="hipster">
   </section>
-  <section id="menu" class="consec" ng-view>
+  <section class="consec" ng-view>
   </section>
   <section id="about" class="consec">
     <div class="content">
@@ -58,13 +59,16 @@
   </section>
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-route.min.js"></script>
-  <script type="text/javascript" src="/js/angular/controllers/research.js"></script>
+  <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyD_DEud0IbgAZ4M0H7lxQDfYGnw3LrEGzE&libraries=places"></script>
+
+  <script type="text/javascript" src="js/angular/controllers/research.js"></script>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
   <script src="js/scripts.js"></script>
 
-  <script type="text/javascript" src="/js/vendor/d3.v3.min.js"></script>
-  <script type="text/javascript" src="/js/vendor/topojson.v1.min.js"></script>
-  <script type="text/javascript" src="/js/map.js"></script>
+  <script type="text/javascript" src="js/vendor/d3.v3.min.js"></script>
+  <script type="text/javascript" src="js/vendor/topojson.v1.min.js"></script>
+  <script type="text/javascript" src="js/map.js"></script>
+
 </body>
 </html>
