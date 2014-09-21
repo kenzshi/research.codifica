@@ -1,6 +1,6 @@
 # So you want to contribute to Research?
 
-## First things first - What you need
+## First the worst - What you need
 
 Yeah, we move fast, but we don't break things. Here's what you'll need.
 
