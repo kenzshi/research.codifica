@@ -52,6 +52,11 @@
             {
                 "id" : "San_Francisco",
                 "name" : "San Francisco",
+                "coords" : {
+                    "lat": 37.7921595,
+                    "long": -122.4153814,
+                    "zoom": 12
+                },
                 "poiData" : [
                     {
                         "id" : "flywheel_coffee_roasters",
@@ -218,12 +223,7 @@
                             "zoom" : 17
                         }
                     }
-                ],
-                "coords" : {
-                    "lat": 37.7577,
-                    "long": -122.4376,
-                    "zoom": 12
-                }
+                ]
             }
         ]
     },
