@@ -1,3 +1,13 @@
+# Research @ Codifica
+
+Yo
+
+# Want to contribute to the research?
+
+Checkout the README inside the `data/` directory.
+
+# Want to compile the data from scratch?
+
 ## Prerequisites
 
     - [Geospatial Data Abstraction Library](http://trac.osgeo.org/gdal/wiki/DownloadingGdalBinaries)
