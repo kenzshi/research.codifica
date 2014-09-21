@@ -36,7 +36,140 @@
             {
                 "id" : "SF",
                 "name" : "San Francisco",
-                "poiData" : []
+                "poiData" : [
+                    {
+                        "id" : "1",
+                        "name" : "Flywheel Coffee Roasters",
+                        "address1" : "672 Stanyan St.",
+                        "address2" : "",
+                        "city" : "San Francisco",
+                        "state" : "CA",
+                        "zip" : "94117",
+                        "country" : "USA",
+                        "lat" : "37.769732",
+                        "long" : "-122.453210"
+                    },
+                    {
+                        "id" : "2",
+                        "name" : "Fourbarrel Coffee",
+                        "address1" : "375 Valencia St.",
+                        "address2" : "",
+                        "city" : "San Francisco",
+                        "state" : "CA",
+                        "zip" : "94103",
+                        "country" : "USA",
+                        "lat" : "37.767033",
+                        "long" : "-122.421874"
+                    },
+                    {
+                        "id" : "3",
+                        "name" : "Stanza Coffee Shop",
+                        "address1" : "1673 Haight St.",
+                        "address2" : "",
+                        "city" : "San Francisco",
+                        "state" : "CA",
+                        "zip" : "94117",
+                        "country" : "USA",
+                        "lat" : "37.769474",
+                        "long" : "-122.450149"
+                    },
+                    {
+                        "id" : "4",
+                        "name" : "Sightglass Coffee",
+                        "address1" : "270 7th St.",
+                        "address2" : "",
+                        "city" : "San Francisco",
+                        "state" : "CA",
+                        "zip" : "94103",
+                        "country" : "USA",
+                        "lat" : "37.776998",
+                        "long" : "-122.408561"
+                    },
+                    {
+                        "id" : "5",
+                        "name" : "Blue Bottle Coffee",
+                        "address1" : "66 Mint Plaza.",
+                        "address2" : "",
+                        "city" : "San Francisco",
+                        "state" : "CA",
+                        "zip" : "94103",
+                        "country" : "USA",
+                        "lat" : "37.782432",
+                        "long" : "-122.407766"
+                    },
+                    {
+                        "id" : "6",
+                        "name" : "Ritual Coffee Roasters",
+                        "address1" : "432b Octavia St.",
+                        "address2" : "",
+                        "city" : "San Francisco",
+                        "state" : "CA",
+                        "zip" : "94102",
+                        "country" : "USA",
+                        "lat" : "37.776416",
+                        "long" : "-122.424252"
+                    },
+                    {
+                        "id" : "7",
+                        "name" : "Philz Coffee",
+                        "address1" : "748 Van Ness Ave.",
+                        "address2" : "",
+                        "city" : "San Francisco",
+                        "state" : "CA",
+                        "zip" : "94102",
+                        "country" : "USA",
+                        "lat" : "37.782487",
+                        "long" : "-122.420444"
+                    },
+                    {
+                        "id" : "8",
+                        "name" : "Jane",
+                        "address1" : "2123 Fillmore St.",
+                        "address2" : "",
+                        "city" : "San Francisco",
+                        "state" : "CA",
+                        "zip" : "94115",
+                        "country" : "USA",
+                        "lat" : "37.789346",
+                        "long" : "-122.434130"
+                    },
+                    {
+                        "id" : "9",
+                        "name" : "Back Yard Coffee Co",
+                        "address1" : "965 Brewster Ave",
+                        "address2" : "",
+                        "city" : "San Francisco",
+                        "state" : "CA",
+                        "zip" : "94063",
+                        "country" : "USA",
+                        "lat" : "37.487526",
+                        "long" : "-122.235188"
+                    },
+                    {
+                        "id" : "10",
+                        "name" : "Dana Street Roasting",
+                        "address1" : "744 W Dana St.",
+                        "address2" : "",
+                        "city" : "Mountain View",
+                        "state" : "CA",
+                        "zip" : "94041",
+                        "country" : "USA",
+                        "lat" : "37.392468",
+                        "long" : "-122.078934"
+                    },
+                    {
+                        "id" : "11",
+                        "name" : "LinkedIn Sunnyvale Coffee Bar",
+                        "address1" : "580 N Mary Ave",
+                        "address2" : "",
+                        "city" : "Sunnyvale",
+                        "state" : "CA",
+                        "zip" : "94086",
+                        "country" : "USA",
+                        "lat" : "37.392504",
+                        "long" : "-122.036750"
+                    }
+                ]
             }
         ]
     },
