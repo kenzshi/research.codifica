@@ -4,9 +4,21 @@ Yo
 
 # Want to contribute to the research?
 
-Checkout the README inside the `data/` directory.
+Good, checkout the README inside the `data/` directory and send me a pull request.
+
+Check to make sure it doesn't break the site before submitting. Or else @kenzshi will drop you a visit when you're sleeping.
+
+Don't know how to check? Just run this from the root research.codifica directory:
+
+    python -m SimpleHTTPServer 1337
+
+Fire up a web browser and navigate to `localhost:1337`
+
+If you don't have Python and SimpleHTTPServer installed, go figure out how to run your own local web server...
 
 # Want to compile the data from scratch?
+
+You fucking masochist.
 
 ## Prerequisites
 
