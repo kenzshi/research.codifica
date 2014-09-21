@@ -48,6 +48,11 @@
     background-image: url('../img/bg.png');
 }
 
+.birdseye .pane ul {
+    height: 250px;
+    overflow-y: scroll;
+}
+
 #map-container {
     overflow-x: hidden;
 }

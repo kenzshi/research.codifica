@@ -9,12 +9,12 @@
         },
         "subregionsData" : [
             {
-                "id" : "Los_Angeles",
+                "id" : "los_angeles",
                 "name" : "Los Angeles",
                 "coords" : {
-                    "lat": 34.0522342,
-                    "long": -118.4117325,
-                    "zoom": 11
+                    "lat" : 34.0522342,
+                    "long" : -118.4117325,
+                    "zoom" : 11
                 },
                 "poiData" : [
                     {
@@ -50,12 +50,12 @@
                 ]
             },
             {
-                "id" : "San_Francisco",
+                "id" : "san_francisco",
                 "name" : "San Francisco",
                 "coords" : {
-                    "lat": 37.7921595,
-                    "long": -122.4153814,
-                    "zoom": 12
+                    "lat" : 37.7921595,
+                    "long" : -122.4153814,
+                    "zoom" : 12
                 },
                 "poiData" : [
                     {
@@ -237,12 +237,53 @@
         },
         "subregionsData" : [
             {
-                "id" : "New_York",
+                "id" : "new_york",
+                "name" : "West Village",
+                "coords" : {
+                    "lat" : 40.7346447,
+                    "long" : -74.0037748,
+                    "zoom" : 14
+                },
+                "poiData" : [
+                    {
+                        "id" : "whynot",
+                        "name" : "Whynot Coffee",
+                        "address1" : "14 Christopher St.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10014",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.733866,
+                            "long" : -74.000467,
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "birch_west_village",
+                        "name" : "Birch Coffee",
+                        "address1" : "56 7th Ave.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10011",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.7384367,
+                            "long" : -74.0000711,
+                            "zoom" : 17
+                        }
+                    }
+                ]
+            },
+            {
+                "id" : "new_york",
                 "name" : "Williamsburg",
                 "coords" : {
-                    "lat": 40.712775,
-                    "long": -73.9594371,
-                    "zoom": 14
+                    "lat" : 40.712775,
+                    "long" : -73.9594371,
+                    "zoom" : 14
                 },
                 "poiData" : [
                     {
@@ -278,12 +319,12 @@
                 ]
             },
             {
-                "id" : "New_York",
+                "id" : "new_york",
                 "name" : "SoHo",
                 "coords" : {
-                    "lat": 40.7236448,
-                    "long": -74.0006793,
-                    "zoom": 14
+                    "lat" : 40.7236448,
+                    "long" : -74.0006793,
+                    "zoom" : 14
                 },
                 "poiData" : [
                     {

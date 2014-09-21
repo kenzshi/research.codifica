@@ -265,8 +265,8 @@ research.factory('birdseye', [function() {
             this.svgMap.selectAll(".places")
                 .data(truncatedCities)
                 .enter().append("path")
-                .attr("class", function(d) { return "place " + d.properties.name.replace(/\ /,'_'); })
-                .attr("id", function(d) { return d.properties.name.replace(/\ /,'_'); })
+                .attr("class", function(d) { return "place " + d.properties.name.replace(/\ /,'_').toLowerCase(); })
+                .attr("id", function(d) { return d.properties.name.replace(/\ /,'_').toLowerCase(); })
                 .attr("d", path);
 
             // Run callback

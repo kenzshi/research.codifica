@@ -67,6 +67,8 @@ So being the little twat that you are, you want to add a subregion. Easy enough.
 
 Once again, everything should be in valid json. The coordinates for the subregions should be retrieved from Google Maps in a similar fashion. Just mess around with the GUI until you get a good mapping.
 
+__Important note, though, is that the id needs to match the id of the POI given from the d3 data. Currently, we are snake casing the lowercase string of the city.__
+
 ## Fifth - Adding a region
 
 This is not currently webscale. No easy way to do this. I guess you can try just adding a region and messing with the coordinates until you get it right, but it uses D3 data instead of Google Maps so it will be pretty hard to determine what that data is. Anyway, here's the skeleton
