@@ -1,8 +1,9 @@
 research.factory('POI', [function() {
-    function POI(id,name,address,coords,scope) {
+    function POI(id,name,address,images,coords,scope) {
         this.id = id;
         this.name = name;
         this.address = address;
+        this.images = images;
         this.coords = coords;
         this.scope = scope;
         this.selected = false;

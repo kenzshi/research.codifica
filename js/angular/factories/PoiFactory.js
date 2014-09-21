@@ -16,7 +16,12 @@ research.factory('poiService', ['POI', function(POI) {
                         country : p.country
                     },
                     coords = p.coords;
-                pointsOfInterest.push(new POI(id,name,address,coords,scope));
+                    if (p.hasOwnProperty('images')) {
+                        var images = p.images;
+                    } else {
+                        var images = [];
+                    }
+                pointsOfInterest.push(new POI(id,name,address,images,coords,scope));
             }
             return pointsOfInterest;
         }

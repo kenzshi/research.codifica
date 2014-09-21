@@ -12,24 +12,19 @@ $(document).ready(function() {
         scrollTop: 0
     }, 500);
   });
+  $("#locations-link").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#locations").offset().top - 100
+    }, 500);
+  });
   $("#about-link").click(function() {
     $('html, body').animate({
         scrollTop: $("#about").offset().top - 100
     }, 500);
   });
-  $("#menu-link").click(function() {
+  $("#team-link").click(function() {
     $('html, body').animate({
-        scrollTop: $("#menu").offset().top - 100
-    }, 500);
-  });
-  $("#events-link").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#events").offset().top - 50
-    }, 500);
-  });
-  $("#contact-link").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#contact").offset().top - 100
+        scrollTop: $("#team").offset().top - 100
     }, 500);
   });
 });

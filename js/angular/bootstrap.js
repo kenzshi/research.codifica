@@ -1,5 +1,6 @@
 var research = angular.module('research', [
     'ngRoute',
+    'angular-carousel'
 ]);
 
 research.config(['$routeProvider', function($routeProvider) {

@@ -114,3 +114,18 @@
     -webkit-animation-timing-function: ease;
 }
 
+.poi-details {
+    margin-top: 20px
+}
+
+.poi-details .poi-images {
+    float: left;
+}
+
+.poi-details .poi-image-li {
+    width: 540px;
+}
+
+.poi-image {
+    width: 540px;
+}

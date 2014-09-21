@@ -246,7 +246,7 @@
                 },
                 "poiData" : [
                     {
-                        "id" : "whynot",
+                        "id" : "whynot_west_village",
                         "name" : "Whynot Coffee",
                         "address1" : "14 Christopher St.",
                         "address2" : "",
@@ -254,6 +254,9 @@
                         "state" : "NY",
                         "zip" : "10014",
                         "country" : "USA",
+                        "images" : [
+                            "data/images/ny/west_village/whynot_west_village/1.jpg"
+                        ],
                         "coords" : {
                             "lat" : 40.733866,
                             "long" : -74.000467,
@@ -269,6 +272,9 @@
                         "state" : "NY",
                         "zip" : "10011",
                         "country" : "USA",
+                        "images" : [
+                            "data/images/ny/west_village/birch_west_village/1.jpg"
+                        ],
                         "coords" : {
                             "lat" : 40.7384367,
                             "long" : -74.0000711,

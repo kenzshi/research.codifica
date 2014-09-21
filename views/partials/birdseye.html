@@ -1,27 +1,40 @@
 <div id="locations" class="content">
     <h1>Locations</h1>
     <section class="this-should-not-be-a-class-but-best-practices birdseye clearfix">
+
         <section id="regions" class="pane">
             <ul>
                 <li ng-repeat="region in regions"><a class="{{region.selected ? 'selected' : ''}}" ng-click="region.select()" ng-mouseover="region.hoverOn()" ng-mouseleave="region.hoverOff()">{{region.name}}</a></li>
             </ul>
         </section>
-        <section id="sub-regions" class="pane">
+
+        <section id="sub-regions" class="pane" ng-if="subregions">
             <ul>
                 <li ng-repeat="subregion in subregions"><a class="{{subregion.selected ? 'selected' : ''}}" ng-click="subregion.select()" ng-mouseover="subregion.hoverOn()" ng-mouseleave="subregion.hoverOff()">{{subregion.name}}</a></li>
             </ul>
         </section>
-        <section id="poi" class="pane">
+
+        <section id="poi" class="pane" ng-if="poi">
             <ul>
                 <li ng-repeat="point in poi"><a class="{{point.selected ? 'selected' : ''}}" ng-click="point.select()">{{point.name}}</a></li>
             </ul>
         </section>
+
         <section id="map-container">
             <div id="region-map">
             </div>
             <div id="google-map">
             </div>
-            <div id="poiDetails" ng-if="pointOfInterest">
+        </section>
+        <section class="poi-details clearfix" ng-if="pointOfInterest">
+            <div class="poi-images">
+                <ul rn-carousel>
+                    <li ng-repeat="image in pointOfInterest.images" class="poi-image-li">
+                        <div class="layer"><img class="poi-image" src="{{image}}"></div>
+                    </li>
+                </ul>
+            </div>
+            <div id="poiDetails">
                 <h2>{{pointOfInterest.name}}</h2>        
                 <div class="address">
                     <p>{{pointOfInterest.address.line1}}</p>
@@ -30,5 +43,6 @@
                 </div>
             </div>
         </section>
+
     </section>
 </div>
