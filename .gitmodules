@@ -1,0 +1,3 @@
+[submodule "js/angular/vendors/angular-carousel"]
+	path = js/angular/vendors/angular-carousel
+	url = https://github.com/revolunet/angular-carousel
