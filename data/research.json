@@ -362,6 +362,36 @@
                             "long" : "-73.999387",
                             "zoom" : 17
                         }
+                    },
+                    {
+                        "id" : "gasoline_alley_wework",
+                        "name" : "Gasoline Alley",
+                        "address1" : "154 Grand St",
+                        "address2" : "(next to WeWork)",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10013",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.7202027,
+                            "long" : -73.9986758,
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "gimme_coffee_soho",
+                        "name" : "Gimme Coffee",
+                        "address1" : "228 Mott St.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10012",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.722365,
+                            "long" : -73.995052,
+                            "zoom" : 17
+                        }
                     }
                 ]
             }
