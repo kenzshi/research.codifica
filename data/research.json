@@ -264,6 +264,21 @@
                         }
                     },
                     {
+                        "id" : "joe_west_village",
+                        "name" : "Joe Coffee",
+                        "address1" : "141 Waverly Place",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10014",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.733299,
+                            "long" : -74.000572,
+                            "zoom" : 17
+                        }
+                    },
+                    {
                         "id" : "birch_west_village",
                         "name" : "Birch Coffee",
                         "address1" : "56 7th Ave.",
@@ -278,6 +293,32 @@
                         "coords" : {
                             "lat" : 40.7384367,
                             "long" : -74.0000711,
+                            "zoom" : 17
+                        }
+                    }
+                ]
+            },
+            {
+                "id" : "new_york",
+                "name" : "Flatiron",
+                "coords" : {
+                    "lat" : 40.7415791,
+                    "long" : -73.9887679,
+                    "zoom" : 14
+                },
+                "poiData" : [
+                    {
+                        "id" : "birch_coffee_flatiron",
+                        "name" : "Birch Coffee",
+                        "address1" : "21 E. 27th St.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10016",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.743615,
+                            "long" : -73.986445,
                             "zoom" : 17
                         }
                     }
@@ -319,6 +360,73 @@
                         "coords" : {
                             "lat" : "40.717425",
                             "long" : "-73.960664",
+                            "zoom" : 17
+                        }
+                    }
+                ]
+            },
+            {
+                "id" : "new_york",
+                "name" : "Greenpoint",
+                "coords" : {
+                    "lat" : 40.7293373,
+                    "long" : -73.9458161,
+                    "zoom" : 14
+                },
+                "poiData" : [
+                    {
+                        "id" : "cafe_grumpy_greenpoint",
+                        "name" : "Café Grumpy",
+                        "address1" : "193 Meserole Ave.",
+                        "address2" : "",
+                        "city" : "Brooklyn",
+                        "state" : "NY",
+                        "zip" : "11222",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.728632,
+                            "long" : -73.948744,
+                            "zoom" : 17
+                        }
+                    }
+                ]
+            },
+            {
+                "id" : "new_york",
+                "name" : "Upper East",
+                "coords" : {
+                    "lat" : 40.7762494,
+                    "long" : -73.9509534,
+                    "zoom" : 14
+                },
+                "poiData" : [
+                    {
+                        "id" : "dtut",
+                        "name" : "DTUT",
+                        "address1" : "1744 2nd Ave.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10128",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.780788,
+                            "long" : -73.949272,
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "joe_ues",
+                        "name" : "Joe Coffee",
+                        "address1" : "1045 Lexington Ave.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10021",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.773008,
+                            "long" : -73.96032,
                             "zoom" : 17
                         }
                     }
@@ -390,6 +498,36 @@
                         "coords" : {
                             "lat" : 40.722365,
                             "long" : -73.995052,
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "iconic_cafe",
+                        "name" : "Iconic Cafe",
+                        "address1" : "238 Lafayette St.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10012",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.72264,
+                            "long" : -73.997191,
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "happy_bones",
+                        "name" : "Happy Bones",
+                        "address1" : "394 Broome St.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10013",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.720823,
+                            "long" : -73.99714,
                             "zoom" : 17
                         }
                     }
