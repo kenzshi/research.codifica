@@ -50,6 +50,47 @@
                 ]
             },
             {
+                "id" : "los_angeles",
+                "name" : "Pasadena",
+                "coords" : {
+                    "lat" : 34.1844709,
+                    "long" : -118.131809,
+                    "zoom" : 11
+                },
+                "poiData" : [
+                    {
+                        "id" : "copa_vida",
+                        "name" : "Copa Vida",
+                        "address1" : "70 S. Raymond Ave.",
+                        "address2" : "",
+                        "city" : "Pasadena",
+                        "state" : "CA",
+                        "zip" : "91105",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 34.144699,
+                            "long" : -118.148654,
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "jameson_brown",
+                        "name" : "Jameson Brown",
+                        "address1" : "260 N. Allen Ave.",
+                        "address2" : "",
+                        "city" : "Pasadena",
+                        "state" : "CA",
+                        "zip" : "91106",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 34.150516,
+                            "long" : -118.112968,
+                            "zoom" : 17
+                        }
+                    }
+                ]
+            },
+            {
                 "id" : "san_francisco",
                 "name" : "San Francisco",
                 "coords" : {
@@ -275,6 +316,21 @@
                         "coords" : {
                             "lat" : 40.733299,
                             "long" : -74.000572,
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "stumptown_west_village",
+                        "name" : "Stumptown Coffee",
+                        "address1" : "30 W. 8th St.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10011",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.732791,
+                            "long" : -73.997973,
                             "zoom" : 17
                         }
                     },
