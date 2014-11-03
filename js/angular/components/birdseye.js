@@ -37,7 +37,7 @@ research.factory('birdseye', [function() {
             // So this is bad, but I'm too lazy to filter out the dataset right now
             cities.forEach(function(el,index) {
                 var name = el.properties.name;
-                if (name == "Los Angeles" || name == "San Francisco" || name == "New York") {
+                if (name == "Los Angeles" || name == "San Francisco" || name == "New York" || name == "New Haven") {
                     truncatedCities.push(el);
                 }
             });

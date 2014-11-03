@@ -83,11 +83,11 @@
 .subunit {
     fill: rgba(228, 228, 228, 0.90);
 }
-.subunit#CA, .subunit#NY {
+.subunit#CA, .subunit#NY, .subunit#CT {
     fill: rgba(44, 43, 43, 0.9);
     transition: all 0.5s ease-in-out;
 }
-.subunit#CA:hover, .subunit#NY:hover, .subunit.hover#CA, .subunit.hover#NY, .subunit.selected#CA, .subunit.selected#NY {
+.subunit#CA:hover, .subunit#NY:hover, .subunit.hover#CA, .subunit.hover#NY, .subunit.selected#CA, .subunit.selected#NY, .subunit#CT:hover, .subunit.hover#CT, .subunit.selected#CT {
     fill: #9B6B00;
     cursor: pointer;
 }

@@ -590,5 +590,57 @@
                 ]
             }
         ]
+    },
+    {
+        "id" : "CT",
+        "name" : "Connecticut",
+        "coords" : {
+            "x" : -12100,
+            "y" : -2500,
+            "scale" : 19 
+        },
+        "subregionsData" : [
+            {
+                "id" : "new_haven",
+                "name" : "New Haven",
+                "coords" : {
+                    "lat" : 41.3095006,
+                    "long" : -72.9284115,
+                    "zoom" : 15
+                },
+                "poiData" : [
+                    {
+                        "id" : "blue_state_new_haven",
+                        "name" : "Blue State Coffee",
+                        "address1" : "84 Wall St.",
+                        "address2" : "",
+                        "city" : "New Haven",
+                        "state" : "CT",
+                        "zip" : "06511",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 41.310353,
+                            "long" : -72.925585,
+                            "zoom" : 15
+                        }
+                    },
+                    {
+                        "id" : "maison_mathis_new_haven",
+                        "name" : "Maison Mathis",
+                        "address1" : "304 Elm St",
+                        "address2" : "",
+                        "city" : "New Haven",
+                        "state" : "CT",
+                        "zip" : "06511",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 41.311073,
+                            "long" : -72.931337,
+                            "zoom" : 17
+                        }
+                    }
+                ]
+            }
+        ]
     }
 ]
