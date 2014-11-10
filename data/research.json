@@ -5,7 +5,7 @@
         "coords" : {
             "x" : 0,
             "y" : -275,
-            "scale" : 2.5 
+            "scale" : 2.5
         },
         "subregionsData" : [
             {
@@ -34,7 +34,7 @@
                     },
                     {
                         "id" : "espresso_profetta",
-                        "name" : "Espresso Profetta",
+                        "name" : "Espresso Profeta",
                         "address1" : "1129 Glendon Ave",
                         "address2" : "",
                         "city" : "Los Angeles",
@@ -274,7 +274,7 @@
         "coords" : {
             "x" : -12550,
             "y" : -2900,
-            "scale" : 20 
+            "scale" : 20
         },
         "subregionsData" : [
             {
@@ -597,7 +597,7 @@
         "coords" : {
             "x" : -12100,
             "y" : -2500,
-            "scale" : 19 
+            "scale" : 19
         },
         "subregionsData" : [
             {
