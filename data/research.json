@@ -46,6 +46,81 @@
                             "long" : "-118.444283",
                             "zoom" : 17
                         }
+                    },
+                    {
+                        "id" : "caffe_luxxe",
+                        "name" : "Caffe Luxxe",
+                        "address1" : "11975 San Vicente Blvd",
+                        "address2" : "",
+                        "city" : "Los Angeles",
+                        "state" : "CA",
+                        "zip" : "90049",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : "34.052651",
+                            "long" : "-118.47178",
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "espresso_cielo",
+                        "name" : "Espresso Cielo",
+                        "address1" : "3101 Main St.",
+                        "address2" : "",
+                        "city" : "Los Angeles",
+                        "state" : "CA",
+                        "zip" : "90405",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : "33.998072",
+                            "long" : "-118.479411",
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "demitasse_cafe",
+                        "name" : "Demitasse Café",
+                        "address1" : "1149 3rd St. #100",
+                        "address2" : "",
+                        "city" : "Los Angeles",
+                        "state" : "CA",
+                        "zip" : "90401",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : "34.0188208",
+                            "long" : "-118.4994578",
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "gget",
+                        "name" : "Go Get 'Em Tiger",
+                        "address1" : "230 N. Larchmont Blvd",
+                        "address2" : "",
+                        "city" : "Los Angeles",
+                        "state" : "CA",
+                        "zip" : "90004",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : "34.075608",
+                            "long" : "-118.323347",
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "gb_coffee",
+                        "name" : "G&B Coffee",
+                        "address1" : "317 S. Broadway",
+                        "address2" : "(Grand Central Market)",
+                        "city" : "Los Angeles",
+                        "state" : "CA",
+                        "zip" : "90013",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : "34.050859",
+                            "long" : "-118.248999",
+                            "zoom" : 17
+                        }
                     }
                 ]
             },
