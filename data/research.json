@@ -356,6 +356,103 @@
             },
             {
                 "id" : "new_york",
+                "name" : "Tribeca",
+                "coords" : {
+                    "lat" : 40.7186438,
+                    "long" : -74.0078263,
+                    "zoom" : 15
+                },
+                "poiData" : [
+                    {
+                        "id" : "kaffe_1668",
+                        "name" : "Kaffe 1668",
+                        "address1" : "275 Greenwich St.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10007",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.715104,
+                            "long" : -74.011045,
+                            "zoom" : 17
+                        }
+                    }
+                ]
+            },
+            {
+                "id" : "new_york",
+                "name" : "East Village",
+                "coords" : {
+                    "lat" : 40.7265834,
+                    "long" : -73.9821536,
+                    "zoom" : 15
+                },
+                "poiData" : [
+                    {
+                        "id" : "abraco_espresso",
+                        "name" : "Abraco Espresso",
+                        "address1" : "87 E. 7th St.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10003",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.727,
+                            "long" : -73.986237,
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "everyman_espresso",
+                        "name" : "Everyman Espresso",
+                        "address1" : "136 E. 13th St.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10003",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.73271,
+                            "long" : -73.988374,
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "bluebird_coffee",
+                        "name" : "Bluebird Coffee",
+                        "address1" : "72 E. 1st St.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10003",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.723514,
+                            "long" : -73.988713,
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "city_of_saints",
+                        "name" : "City of Saints",
+                        "address1" : "79 E. 10th St.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10003",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.731291,
+                            "long" : -73.989968,
+                            "zoom" : 17
+                        }
+                    }
+                ]
+            },
+            {
+                "id" : "new_york",
                 "name" : "Flatiron",
                 "coords" : {
                     "lat" : 40.7415791,
@@ -375,6 +472,32 @@
                         "coords" : {
                             "lat" : 40.743615,
                             "long" : -73.986445,
+                            "zoom" : 17
+                        }
+                    }
+                ]
+            },
+            {
+                "id" : "new_york",
+                "name" : "Midtown",
+                "coords" : {
+                    "lat" : 40.7504877,
+                    "long" : -73.9839238,
+                    "zoom" : 14
+                },
+                "poiData" : [
+                    {
+                        "id" : "culture_espresso",
+                        "name" : "Culture Espresso",
+                        "address1" : "72 W. 38th St.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10018",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.751924,
+                            "long" : -73.985739,
                             "zoom" : 17
                         }
                     }
@@ -416,6 +539,21 @@
                         "coords" : {
                             "lat" : "40.717425",
                             "long" : "-73.960664",
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "black_brick_coffee",
+                        "name" : "Black Brick Coffee",
+                        "address1" : "300 Bedford Ave",
+                        "address2" : "",
+                        "city" : "Brooklyn",
+                        "state" : "NY",
+                        "zip" : "11211",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : "40.714173",
+                            "long" : "-73.96165",
                             "zoom" : 17
                         }
                     }
@@ -584,6 +722,21 @@
                         "coords" : {
                             "lat" : 40.720823,
                             "long" : -73.99714,
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "la_colombe",
+                        "name" : "La Colombe",
+                        "address1" : "270 Lafayette St.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10012",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.7221777,
+                            "long" : -73.9969614,
                             "zoom" : 17
                         }
                     }
