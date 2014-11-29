@@ -126,6 +126,32 @@
             },
             {
                 "id" : "los_angeles",
+                "name" : "Newport Beach",
+                "coords" : {
+                    "lat" : 33.6208157,
+                    "long" : -117.8705663,
+                    "zoom" : 11
+                },
+                "poiData" : [
+                    {
+                        "id" : "kean_coffee",
+                        "name" : "Kéan Coffee",
+                        "address1" : "2043 Westcliff Dr. #100",
+                        "address2" : "",
+                        "city" : "Newport Beach",
+                        "state" : "CA",
+                        "zip" : "92660",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 33.627424,
+                            "long" : -117.908279,
+                            "zoom" : 17
+                        }
+                    }
+                ]
+            },
+            {
+                "id" : "los_angeles",
                 "name" : "Pasadena",
                 "coords" : {
                     "lat" : 34.1844709,
