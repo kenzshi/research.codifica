@@ -46,6 +46,107 @@
                             "long" : "-118.444283",
                             "zoom" : 17
                         }
+                    },
+                    {
+                        "id" : "caffe_luxxe",
+                        "name" : "Caffe Luxxe",
+                        "address1" : "11975 San Vicente Blvd",
+                        "address2" : "",
+                        "city" : "Los Angeles",
+                        "state" : "CA",
+                        "zip" : "90049",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : "34.052651",
+                            "long" : "-118.47178",
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "espresso_cielo",
+                        "name" : "Espresso Cielo",
+                        "address1" : "3101 Main St.",
+                        "address2" : "",
+                        "city" : "Los Angeles",
+                        "state" : "CA",
+                        "zip" : "90405",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : "33.998072",
+                            "long" : "-118.479411",
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "demitasse_cafe",
+                        "name" : "Demitasse Café",
+                        "address1" : "1149 3rd St. #100",
+                        "address2" : "",
+                        "city" : "Los Angeles",
+                        "state" : "CA",
+                        "zip" : "90401",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : "34.0188208",
+                            "long" : "-118.4994578",
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "gget",
+                        "name" : "Go Get 'Em Tiger",
+                        "address1" : "230 N. Larchmont Blvd",
+                        "address2" : "",
+                        "city" : "Los Angeles",
+                        "state" : "CA",
+                        "zip" : "90004",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : "34.075608",
+                            "long" : "-118.323347",
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "gb_coffee",
+                        "name" : "G&B Coffee",
+                        "address1" : "317 S. Broadway",
+                        "address2" : "(Grand Central Market)",
+                        "city" : "Los Angeles",
+                        "state" : "CA",
+                        "zip" : "90013",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : "34.050859",
+                            "long" : "-118.248999",
+                            "zoom" : 17
+                        }
+                    }
+                ]
+            },
+            {
+                "id" : "los_angeles",
+                "name" : "Newport Beach",
+                "coords" : {
+                    "lat" : 33.6208157,
+                    "long" : -117.8705663,
+                    "zoom" : 11
+                },
+                "poiData" : [
+                    {
+                        "id" : "kean_coffee",
+                        "name" : "Kéan Coffee",
+                        "address1" : "2043 Westcliff Dr. #100",
+                        "address2" : "",
+                        "city" : "Newport Beach",
+                        "state" : "CA",
+                        "zip" : "92660",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 33.627424,
+                            "long" : -117.908279,
+                            "zoom" : 17
+                        }
                     }
                 ]
             },
@@ -269,6 +370,43 @@
         ]
     },
     {
+        "id" : "OR",
+        "name" : "Oregon",
+        "coords" : {
+            "x" : -170,
+            "y" : -140,
+            "scale" : 4
+        },
+        "subregionsData" : [
+            {
+                "id" : "portland",
+                "name" : "Portland",
+                "coords" : {
+                    "lat" : 45.5424364,
+                    "long" : -122.654422,
+                    "zoom" : 11
+                },
+                "poiData" : [
+                    {
+                        "id" : "water_avenue",
+                        "name" : "Water Avenue Coffee",
+                        "address1" : "1028 S.E. Water Ave #145",
+                        "address2" : "",
+                        "city" : "Portland",
+                        "state" : "OR",
+                        "zip" : "97214",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 45.515424,
+                            "long" : -122.66547,
+                            "zoom" : 17
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "id" : "NY",
         "name" : "New York",
         "coords" : {
@@ -356,6 +494,103 @@
             },
             {
                 "id" : "new_york",
+                "name" : "Tribeca",
+                "coords" : {
+                    "lat" : 40.7186438,
+                    "long" : -74.0078263,
+                    "zoom" : 15
+                },
+                "poiData" : [
+                    {
+                        "id" : "kaffe_1668",
+                        "name" : "Kaffe 1668",
+                        "address1" : "275 Greenwich St.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10007",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.715104,
+                            "long" : -74.011045,
+                            "zoom" : 17
+                        }
+                    }
+                ]
+            },
+            {
+                "id" : "new_york",
+                "name" : "East Village",
+                "coords" : {
+                    "lat" : 40.7265834,
+                    "long" : -73.9821536,
+                    "zoom" : 15
+                },
+                "poiData" : [
+                    {
+                        "id" : "abraco_espresso",
+                        "name" : "Abraco Espresso",
+                        "address1" : "87 E. 7th St.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10003",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.727,
+                            "long" : -73.986237,
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "everyman_espresso",
+                        "name" : "Everyman Espresso",
+                        "address1" : "136 E. 13th St.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10003",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.73271,
+                            "long" : -73.988374,
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "bluebird_coffee",
+                        "name" : "Bluebird Coffee",
+                        "address1" : "72 E. 1st St.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10003",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.723514,
+                            "long" : -73.988713,
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "city_of_saints",
+                        "name" : "City of Saints",
+                        "address1" : "79 E. 10th St.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10003",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.731291,
+                            "long" : -73.989968,
+                            "zoom" : 17
+                        }
+                    }
+                ]
+            },
+            {
+                "id" : "new_york",
                 "name" : "Flatiron",
                 "coords" : {
                     "lat" : 40.7415791,
@@ -375,6 +610,32 @@
                         "coords" : {
                             "lat" : 40.743615,
                             "long" : -73.986445,
+                            "zoom" : 17
+                        }
+                    }
+                ]
+            },
+            {
+                "id" : "new_york",
+                "name" : "Midtown",
+                "coords" : {
+                    "lat" : 40.7504877,
+                    "long" : -73.9839238,
+                    "zoom" : 14
+                },
+                "poiData" : [
+                    {
+                        "id" : "culture_espresso",
+                        "name" : "Culture Espresso",
+                        "address1" : "72 W. 38th St.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10018",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.751924,
+                            "long" : -73.985739,
                             "zoom" : 17
                         }
                     }
@@ -416,6 +677,21 @@
                         "coords" : {
                             "lat" : "40.717425",
                             "long" : "-73.960664",
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "black_brick_coffee",
+                        "name" : "Black Brick Coffee",
+                        "address1" : "300 Bedford Ave",
+                        "address2" : "",
+                        "city" : "Brooklyn",
+                        "state" : "NY",
+                        "zip" : "11211",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : "40.714173",
+                            "long" : "-73.96165",
                             "zoom" : 17
                         }
                     }
@@ -584,6 +860,21 @@
                         "coords" : {
                             "lat" : 40.720823,
                             "long" : -73.99714,
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "la_colombe",
+                        "name" : "La Colombe",
+                        "address1" : "270 Lafayette St.",
+                        "address2" : "",
+                        "city" : "New York",
+                        "state" : "NY",
+                        "zip" : "10012",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 40.7221777,
+                            "long" : -73.9969614,
                             "zoom" : 17
                         }
                     }
