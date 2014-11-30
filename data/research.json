@@ -370,43 +370,6 @@
         ]
     },
     {
-        "id" : "OR",
-        "name" : "Oregon",
-        "coords" : {
-            "x" : -170,
-            "y" : -140,
-            "scale" : 4
-        },
-        "subregionsData" : [
-            {
-                "id" : "portland",
-                "name" : "Portland",
-                "coords" : {
-                    "lat" : 45.5424364,
-                    "long" : -122.654422,
-                    "zoom" : 11
-                },
-                "poiData" : [
-                    {
-                        "id" : "water_avenue",
-                        "name" : "Water Avenue Coffee",
-                        "address1" : "1028 S.E. Water Ave #145",
-                        "address2" : "",
-                        "city" : "Portland",
-                        "state" : "OR",
-                        "zip" : "97214",
-                        "country" : "USA",
-                        "coords" : {
-                            "lat" : 45.515424,
-                            "long" : -122.66547,
-                            "zoom" : 17
-                        }
-                    }
-                ]
-            }
-        ]
-    },
-    {
         "id" : "NY",
         "name" : "New York",
         "coords" : {
@@ -875,6 +838,43 @@
                         "coords" : {
                             "lat" : 40.7221777,
                             "long" : -73.9969614,
+                            "zoom" : 17
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id" : "OR",
+        "name" : "Oregon",
+        "coords" : {
+            "x" : -170,
+            "y" : -140,
+            "scale" : 4
+        },
+        "subregionsData" : [
+            {
+                "id" : "portland",
+                "name" : "Portland",
+                "coords" : {
+                    "lat" : 45.5424364,
+                    "long" : -122.654422,
+                    "zoom" : 11
+                },
+                "poiData" : [
+                    {
+                        "id" : "water_avenue",
+                        "name" : "Water Avenue Coffee",
+                        "address1" : "1028 S.E. Water Ave #145",
+                        "address2" : "",
+                        "city" : "Portland",
+                        "state" : "OR",
+                        "zip" : "97214",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 45.515424,
+                            "long" : -122.66547,
                             "zoom" : 17
                         }
                     }
