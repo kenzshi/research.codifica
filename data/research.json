@@ -846,6 +846,73 @@
         ]
     },
     {
+        "id" : "WA",
+        "name" : "Washington",
+        "coords" : {
+            "x" : -170,
+            "y" : 0,
+            "scale" : 4
+        },
+        "subregionsData" : [
+            {
+                "id" : "seattle",
+                "name" : "Seattle",
+                "coords" : {
+                    "lat" : 47.6148481,
+                    "long" : -122.3359059,
+                    "zoom" : 13
+                },
+                "poiData" : [
+                    {
+                        "id" : "monorail_espresso",
+                        "name" : "Monorail Espresso",
+                        "address1" : "520 Pike St",
+                        "address2" : "",
+                        "city" : "Seattle",
+                        "state" : "WA",
+                        "zip" : "98101",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 47.61121,
+                            "long" : -122.335182,
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "victorla_coffee_roasters",
+                        "name" : "Victrola Coffee Roasters",
+                        "address1" : "310 E Pike St",
+                        "address2" : "",
+                        "city" : "Seattle",
+                        "state" : "WA",
+                        "zip" : "98122",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 47.614318,
+                            "long" : -122.327291,
+                            "zoom" : 17
+                        }
+                    },
+                    {
+                        "id" : "espresso_vivace",
+                        "name" : "Espresso Vivace",
+                        "address1" : "227 Yale Ave N",
+                        "address2" : "",
+                        "city" : "Seattle",
+                        "state" : "WA",
+                        "zip" : "98109",
+                        "country" : "USA",
+                        "coords" : {
+                            "lat" : 47.620179,
+                            "long" : -122.330584,
+                            "zoom" : 17
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "id" : "OR",
         "name" : "Oregon",
         "coords" : {
