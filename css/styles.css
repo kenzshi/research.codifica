@@ -91,7 +91,7 @@ small {
 }
 
 #hipster {
-  background-image: url('../img/hipster.jpg');
+  background-image: url('../img/icecream.jpg');
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -100,6 +100,15 @@ small {
   transition: all 0.5s ease-in-out;
   position: fixed;
   text-align: center;
+}
+
+p.pokemon{
+  text-align:center;
+  font-family: 'Amatic SC', sans-serif;
+  font-weight: 700;
+  font-size: 30pt;
+  margin-top:10px;
+  margin-bottom:10px;
 }
 
 #hipster .map {

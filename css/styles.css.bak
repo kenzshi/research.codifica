@@ -1,5 +1,5 @@
 #hipster {
-    background-image: url('../img/hipster.jpg');
+    background-image: url('../img/icecream.jpg');
     background-size: cover;
     height: 100%;
     width: 100%;

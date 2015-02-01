@@ -1,0 +1,132 @@
+<!DOCTYPE html> 
+<html lang="en" ng-app="research">
+<head>
+  <meta charset="utf-8">
+  <title>Metal Tasting Spoods</title>
+  <meta property="og:site_name" content="Metal Tasting Spoons">
+  <meta property="og:url" content="http://research.codificacoffee.com">
+  <meta property="og:image" content="http://research.codificacoffee.com/img/promo.png">
+  <meta property="og:description" content="We at Codifica have traveled far and wide to search for the best coffee shops around the world. From the concrete jungle of New York City to the tech-craved, disruptive haven of San Francisco, our team has committed countless hours into researching what makes a coffee shop, well, a coffee shop.
+  The purpose of our research is to make Codifica a coffee experience unlike any other, by combining the best attributes and features of coffee repos around the world.">
+  <meta name="description" content="We at Codifica have traveled far and wide to search for the best coffee shops around the world. From the concrete jungle of New York City to the tech-craved, disruptive haven of San Francisco, our team has committed countless hours into researching what makes a coffee shop, well, a coffee shop.
+  The purpose of our research is to make Codifica a coffee experience unlike any other, by combining the best attributes and features of coffee repos around the world.">
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/birdseye.css">
+  <link rel="stylesheet" href="js/angular/vendors/angular-carousel/dist/angular-carousel.min.css">
+</head>
+
+<body>
+  <img src="img/icecream.png" hidden="hidden">
+  <div id="header_nav">
+    <section id="header">
+      <ul>
+        <a href="http://codificacoffee.com"><li>Codifica</li></a>
+        <li id="locations-link">Locations</li>
+        <li id="logo"></li>
+        <li id="about-link">About</li>
+        <li id="team-link">Team</li>
+      </ul>
+    </section>
+  </div>
+  <section id="hipster">
+  </section>
+  <section id="locations" class="consec" ng-view>
+  </section>
+  <section id="about" class="consec">
+    <div class="content">
+      <h1>About</h1>
+      <p>
+        At Metal Tasting Spoons, we want to be the very best. Like no one ever was. To taste them is our real test. To rate them is our cause. We will travel across the lands, searching far and wide. Each shop to understand, the flavor that's inside.</p>
+        <p class="pokemon"> ICE CREAM SHOPS. GOTTA TASTE THEM ALL. </p>
+      <p>
+        The purpose of our research is to make Codifica a coffee experience unlike any other, by combining the best attributes and features of coffee repos around the world.
+      </p>
+      <br>
+    </div>
+    <br><br>
+  <div class="divider">&nbsp;</div>
+  </section>
+  <section id="team" class="consec">
+    <h1>Researchers</h1>
+    <h2>The Team</h2>
+    <ul class="team-profiles clearfix">
+        <li class="team-profile">
+            <a href="http://shitjameswusays.tumblr.com">
+            <img class="team-profile-img" src="img/team/jwu.jpg">
+            <h2>Jamestown</h2>
+            </a>
+            Founder &middot; Hustler
+        </li>
+        <li class="team-profile">
+            <a href="http://urbanoutfitters.com">
+            <img class="team-profile-img" src="img/team/jwang.jpg">
+            <h2>Jeph</h2>
+            </a>
+            Founder & Professional Hips Stirrer
+        </li>
+        <li class="team-profile">
+            <a href="http://fyeahstop.tumblr.com">
+            <img class="team-profile-img" src="img/team/cchan.jpg">
+            <h2>ChanMan</h2>
+            </a>
+            Field Photographer &amp; Caffeinated Code Pusher
+        </li>
+        <li class="team-profile">
+            <a href="http://linkedin.com">
+            <img class="team-profile-img" src="img/team/dduan.jpg">
+            <h2>DDuan<small>e reade</small></h2>
+            </a>
+            Researcher of the Bae... Area
+        </li>
+    </ul>
+    <div class="divider">&nbsp;</div>
+  </section>
+  <section class="consec">
+      <div class="quote">Good artists borrow, great artists steal.&rdquo;</div>
+  </section>
+  <section id="contact" class="consec">
+    <div class="content">
+      <div id="contact-left">
+        Want to contribute to our growth?<br>
+        Interested in being a mentor?<br>
+        Contact us.<br>
+        <a href="mailto:hello@codificacoffee.com">hello@codificacoffee.com</a>
+      </div>
+      <div id="contact-right">
+        Codifica Coffee<br>
+        527 Midvale Avenue<br>
+        Los Angeles, CA 90024<br>
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-route.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-touch.min.js"></script>
+  <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyD_DEud0IbgAZ4M0H7lxQDfYGnw3LrEGzE&libraries=places"></script>
+
+  <!-- Angular Vendors -->
+  <script type="text/javascript" src="js/angular/vendors/angular-carousel/dist/angular-carousel.min.js"></script>
+
+  <!-- Angular Codebase -->
+  <script type="text/javascript" src="js/angular/bootstrap.js"></script>
+  <script type="text/javascript" src="js/angular/models/region.js"></script>
+  <script type="text/javascript" src="js/angular/models/subregion.js"></script>
+  <script type="text/javascript" src="js/angular/models/poi.js"></script>
+  <script type="text/javascript" src="js/angular/models/gmap.js"></script>
+  <script type="text/javascript" src="js/angular/factories/PoiFactory.js"></script>
+  <script type="text/javascript" src="js/angular/factories/SubregionFactory.js"></script>
+  <script type="text/javascript" src="js/angular/factories/RegionFactory.js"></script>
+  <script type="text/javascript" src="js/angular/components/birdseye.js"></script>
+  <script type="text/javascript" src="js/angular/controllers/research.js"></script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+  <script src="js/scripts.js"></script>
+
+  <script type="text/javascript" src="js/vendor/d3.v3.min.js"></script>
+  <script type="text/javascript" src="js/vendor/topojson.v1.min.js"></script>
+  <script type="text/javascript" src="js/map.js"></script>
+
+</body>
+</html>
+
